@@ -1,0 +1,15 @@
+package com.projectgoth.fusion.restapi.data;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(
+   name = "user"
+)
+public class SSOLoginResponseData {
+   public String sessionId;
+   public String captcha;
+   public String message;
+}

@@ -1,0 +1,31 @@
+package com.projectgoth.fusion.userevent.system;
+
+import com.projectgoth.fusion.common.ConfigUtils;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
+import org.springframework.context.ApplicationContext;
+
+public class EventSystemMain {
+   private static final String APP_NAME = "EventSystem";
+   private static final String CONFIG_FILE = ConfigUtils.getConfigDirectory() + "EventSystem.cfg";
+   private static Logger log = Logger.getLogger(ConfigUtils.getLoggerName(EventSystemMain.class));
+   private static ApplicationContext context;
+
+   public static void main(String[] args) {
+      DOMConfigurator.configureAndWatch("log4j.xml", 30000L);
+      log.info("EventSystem version @version@");
+      log.info("Copyright (c) 2005-2008 Project Goth Inc. All rights reserved");
+      context = EventSystemApplicationContext.getContext();
+      EventSystem app = (EventSystem)context.getBean("eventSystem");
+      int status;
+      if (args.length >= 1) {
+         log.info("Using custom configuration file: " + args[0]);
+         status = app.main("EventSystem", args, args[0]);
+      } else {
+         status = app.main("EventSystem", args, CONFIG_FILE);
+      }
+
+      log.info("Exiting application");
+      System.exit(status);
+   }
+}
