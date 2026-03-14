@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="login_username" type="id"></item>
+    <item name="login_password" type="id"></item>
+    <item name="login_presence" type="id"></item>
+    
+    <item name="value_username" type="id"></item>
+    <item name="value_mig33_command" type="id"></item>
+    <item name="value_url" type="id"/>
+    <item name="value_chat_name" type="id"></item>
+    <item name="value_group_id" type="id"></item>
+    <item name="value_conversation_id" type="id"></item>
+    
+    <item name="action_id" type="id"/>
+    <item name="action_login" type="id"></item>
+    <item name="action_logout" type="id"></item>
+    <item name="action_mig33_command" type="id"></item>
+    <item name="action_open_browser" type="id"></item>
+    <item name="action_open_discover" type="id"></item>
+    <item name="action_open_chatrooms" type="id"></item>
+    <item name="action_open_my_profile" type="id"></item>
+    <item name="action_create_group_chat" type="id"></item>
+    <item name="action_language_list" type="id"></item>   
+    <item name="action_change_language" type="id"></item>
+
+    <item name="action_mark_read" type="id"></item>
+    <item name="action_mark_unread" type="id"></item>
+
+    <item name="action_accept" type="id"></item>
+    <item name="action_reject" type="id"></item>
+    
+    <item name="action_display_photo" type="id"></item>
+    <item name="action_delete_post" type="id"></item>
+    <item name="action_lock_post" type="id"></item>
+    <item name="action_unlock_post" type="id"></item>
+    <item name="action_subscribe_post" type="id"></item>
+    <item name="action_leave_chat" type="id"></item>
+    <item name="action_open_group" type="id"></item>
+    <item name="action_execute_action" type="id"></item>
+    <item name="action_waiting_action" type="id"></item>
+    <item name="action_alert_action" type="id"></item>
+    <item name="action_alert_type" type="id"></item>
+    <item name="action_add_to_group_chat" type="id"></item>
+    <item name="action_change_group_chat_name" type="id"></item>
+    <item name="action_chatroom_info" type="id"></item>
+    <item name="action_view_participants" type="id"></item>
+    <item name="action_invite_people" type="id"/>
+    <item name="action_open_migstore" type="id"></item>
+    <item name="action_open_settings" type="id"></item>
+    <item name="action_clear_image_cache" type="id"></item>
+    <item name="action_settings_default" type="id"></item>
+    <item name="action_chat_notification_vibrate" type="id"></item>
+    <item name="action_chat_notification_sound" type="id"></item>
+
+    <item name="action_show_pinned" type="id"></item>
+    <item name="action_hide_pinned" type="id"></item>
+
+    <item name="action_presence_available" type="id"></item>
+    <item name="action_presence_away" type="id"></item>
+    <item name="action_presence_busy" type="id"></item>
+    <item name="action_presence_offline" type="id"></item>
+    
+    <item name="action_privacy_public_clicked" type="id" />
+    <item name="action_privacy_friends_clicked" type="id" />
+    <item name="action_privacy_private_clicked" type="id" />
+
+    <item name="action_share_chatroom" type="id" />
+    <item name="action_share_profile" type="id" />
+
+    <item name="action_recharge_clicked" type="id" />
+    
+    <item name="holder" type="id"/>
+    <item name="holder_footer" type="id"/>
+    <item name="action_id_url" type="id"></item>
+    
+    <item name="gridview" type="id"/>
+    <item name="webview" type="id"/>
+    
+    <item name="option_item_pin" type="id"/>
+    <item name="option_item_unpin" type="id"/>
+    <item name="option_item_mute" type="id"/>
+    <item name="option_item_unmute" type="id"/>
+    <item name="option_item_close" type="id"/>
+    <item name="option_item_follow" type="id"/>
+    <item name="option_item_view_profile" type="id"/>
+    <item name="option_item_chat" type="id"/>
+    <item name="option_item_send_gift" type="id"/>
+    <item name="option_item_settings" type="id"/>
+    <item name="option_item_edit_details" type="id"/>
+    <item name="option_item_transfer_credit" type="id"/>
+    <item name="option_item_report_abuse" type="id"/>
+    <item name="option_item_pin_item" type="id"/>
+    <item name="option_item_unpin_item" type="id"/>
+    <item name="option_item_hide_pinned_message" type="id"/>
+    <item name="option_item_show_pinned_message" type="id"/>
+
+    <item name="option_item_kick" type="id"/>
+    <item name="option_item_block" type="id"/>
+    <item name="option_item_remove_friend" type="id"/>
+    <item name="option_item_unfollow" type="id"/>
+    <item name="option_item_move_to_group" type="id"/>
+	<item name="option_item_group_post" type="id"/>
+	<item name="option_item_group_member" type="id"/>
+	<item name="option_item_search_group" type="id"/>
+	<item name="option_item_group_setting" type="id"/>
+	<item name="option_item_report_group" type="id"/>
+	<item name="option_item_leave_group" type="id"/>
+	<item name="option_item_mention" type="id"/>
+	<item name="option_item_buy_credits" type="id"/>
+	<item name="option_item_add_contact_group" type="id"/>
+	<item name="option_item_rename_contact_group" type="id"/>
+	<item name="option_item_remove_contact_group" type="id"/>
+	<item name="option_addremove_favourite_chatroom" type="id"/>
+	<item name="option_item_show_offline_contacts" type="id"/>
+	<item name="option_item_hide_offline_contacts" type="id"/>
+	<item name="option_item_login_contact_group" type="id"/>
+	<item name="option_item_logout_contact_group" type="id"/>
+	<item name="option_item_setupim_contact_group" type="id"/>
+    <item name="option_item_group_fusion_friends" type="id"/>
+    <item name="option_item_ungroup_fusion_friends" type="id"/>
+    
+	<item name="captcha_dialog_id" type="id"/>
+	<item name="captcha_id" type="id"/>
+
+	<item name="option_item_camera" type="id"/>
+	<item name="option_item_gallery" type="id"/>
+	<item name="option_item_avatar" type="id"/>
+	
+	<item name="option_item_copy" type="id"/>
+	<item name="option_item_share" type="id"/>
+	<item name="option_item_retry" type="id" />
+	
+	<item name="action_sign_in_off_facebook" type="id"/>
+	<item name="action_sign_in_off_gtalk" type="id"/>
+	<item name="action_sign_in_off_yahoo" type="id"/>
+	<item name="action_sign_in_off_msn" type="id"/>
+	
+	<item name="image_loadtarget" type="id" />
+    <item name="image_loading" type="id"/>
+	
+	<!-- profile actions -->
+    <item name="action_profile_about" type="id"></item>
+    <item name="action_profile_mentions" type="id"></item>
+    <item name="action_profile_favourites" type="id"></item>
+    <item name="action_profile_chatrooms" type="id"></item>
+    <item name="action_profile_photos" type="id"></item>
+    <item name="action_profile_games" type="id"></item>
+    <item name="action_profile_groups" type="id"></item>
+
+    <item name="is_root_data_content" type="id"></item>
+    <item name="overlay_icon" type="id"></item>
+</resources>

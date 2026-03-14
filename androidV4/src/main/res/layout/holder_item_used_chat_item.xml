@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/used_item_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/small_padding"
+    android:paddingRight="@dimen/small_padding">
+
+    <ImageView
+        android:id="@+id/item"
+        android:layout_width="@dimen/sticker_thumb_width"
+        android:layout_height="@dimen/sticker_thumb_height"
+        android:contentDescription="@string/holder_item_used_chat_item_cd_item"
+        android:scaleType="fitCenter" />
+    
+    <ImageView
+        android:id="@+id/gift_indicator"
+        android:layout_width="@dimen/used_item_gift_indicator"
+        android:layout_height="@dimen/used_item_gift_indicator"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/holder_item_used_chat_item_cd_gift_indicator"
+        android:src="@drawable/ad_chat_inputgift"/>
+
+</RelativeLayout>

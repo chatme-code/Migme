@@ -1,0 +1,15 @@
+include ':'
+
+include ':mig33JavaClientFramework'
+project(':mig33JavaClientFramework').projectDir = new File('../mig33JavaClientFramework/') 
+
+include ':mig33FusionClientService'
+project(':mig33FusionClientService').projectDir = new File('../mig33FusionClientService/') 
+
+include ':client-miniblog'
+project(':client-miniblog').projectDir = new File('../client-miniblog/') 
+
+include ':mig33ClientNetworkService'
+project(':mig33ClientNetworkService').projectDir = new File('../mig33ClientNetworkService/') 
+
+include ':facebookSDK'

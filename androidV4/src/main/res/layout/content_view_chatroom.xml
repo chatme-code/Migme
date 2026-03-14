@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mime_chatroom_background">
+
+    <TextView
+        android:id="@+id/chatroom_mark"
+        android:layout_width="@dimen/mime_photo_thumbnail_size"
+        android:layout_height="@dimen/mime_photo_thumbnail_size"
+        android:gravity="center"
+        android:textSize="@dimen/mime_chatroom_mark_size"
+        android:textColor="@color/white_text_color"/>
+
+    <LinearLayout
+        android:id="@+id/chatroom_info_container"
+        android:layout_toRightOf="@id/chatroom_mark"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mime_photo_thumbnail_size"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:id="@+id/chatroom_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/xxsmall_margin"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/default_text"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/chatroom_creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxsmall_margin"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/default_timestamp"/>
+
+        <TextView
+            android:id="@+id/chatroom_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/default_text"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/join_chat_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chatroom_info_container"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white_background"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingTop="@dimen/small_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:paddingBottom="@dimen/small_padding" >
+
+        <TextView
+            android:id="@+id/join_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/default_text"/>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/icon_width_xxxsmall"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_height="@dimen/icon_height_xxxsmall"
+            android:src="@drawable/ad_arrowright_grey" />
+
+    </LinearLayout>
+
+</RelativeLayout>

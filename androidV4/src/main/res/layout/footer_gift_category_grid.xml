@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:id="@+id/gift_category_footer_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/normal_padding" >
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/medium_padding"
+        android:textColor="@color/default_text"
+        android:textSize="@dimen/text_size_large" />
+
+    <com.projectgoth.ui.widget.ButtonEx
+        android:id="@+id/store_icon_button"
+        style="@style/Button.Default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/small_margin"
+        android:gravity="center"
+        mig33:icon="@drawable/ad_chatw_storewht"
+        mig33:type="button_orange" />
+
+</LinearLayout>

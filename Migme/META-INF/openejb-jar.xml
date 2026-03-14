@@ -1,0 +1,58 @@
+<openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
+<ejb-deployment ejb-name="Metrics">
+	<jndi name="ejb/Metrics" interface="com.projectgoth.fusion.interfaces.MetricsHome"/>
+	<jndi name="MetricsLocal" interface="com.projectgoth.fusion.interfaces.MetricsLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Account">
+	<jndi name="ejb/Account" interface="com.projectgoth.fusion.interfaces.AccountHome"/>
+	<jndi name="AccountLocal" interface="com.projectgoth.fusion.interfaces.AccountLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Rewards">
+	<jndi name="ejb/Rewards" interface="com.projectgoth.fusion.interfaces.RewardsHome"/>
+	<jndi name="RewardsLocal" interface="com.projectgoth.fusion.interfaces.RewardsLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Group">
+	<jndi name="ejb/Group" interface="com.projectgoth.fusion.interfaces.GroupHome"/>
+	<jndi name="GroupLocal" interface="com.projectgoth.fusion.interfaces.GroupLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Web">
+	<jndi name="ejb/Web" interface="com.projectgoth.fusion.interfaces.WebHome"/>
+	<jndi name="WebLocal" interface="com.projectgoth.fusion.interfaces.WebLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Guardset">
+	<jndi name="ejb/Guardset" interface="com.projectgoth.fusion.interfaces.GuardsetHome"/>
+	<jndi name="GuardsetLocal" interface="com.projectgoth.fusion.interfaces.GuardsetLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Merchants">
+	<jndi name="ejb/Merchants" interface="com.projectgoth.fusion.interfaces.MerchantsHome"/>
+	<jndi name="MerchantsLocal" interface="com.projectgoth.fusion.interfaces.MerchantsLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Content">
+	<jndi name="ejb/Content" interface="com.projectgoth.fusion.interfaces.ContentHome"/>
+	<jndi name="ContentLocal" interface="com.projectgoth.fusion.interfaces.ContentLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Contact">
+	<jndi name="ejb/Contact" interface="com.projectgoth.fusion.interfaces.ContactHome"/>
+	<jndi name="ContactLocal" interface="com.projectgoth.fusion.interfaces.ContactLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="User">
+	<jndi name="ejb/User" interface="com.projectgoth.fusion.interfaces.UserHome"/>
+	<jndi name="UserLocal" interface="com.projectgoth.fusion.interfaces.UserLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Message">
+	<jndi name="ejb/Message" interface="com.projectgoth.fusion.interfaces.MessageHome"/>
+	<jndi name="MessageLocal" interface="com.projectgoth.fusion.interfaces.MessageLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Voice">
+	<jndi name="ejb/Voice" interface="com.projectgoth.fusion.interfaces.VoiceHome"/>
+	<jndi name="VoiceLocal" interface="com.projectgoth.fusion.interfaces.VoiceLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="MIS">
+	<jndi name="ejb/MIS" interface="com.projectgoth.fusion.interfaces.MISHome"/>
+	<jndi name="MISLocal" interface="com.projectgoth.fusion.interfaces.MISLocalHome"/>
+</ejb-deployment>
+<ejb-deployment ejb-name="Voucher">
+	<jndi name="ejb/Voucher" interface="com.projectgoth.fusion.interfaces.VoucherHome"/>
+	<jndi name="VoucherLocal" interface="com.projectgoth.fusion.interfaces.VoucherLocalHome"/>
+</ejb-deployment>
+</openejb-jar>

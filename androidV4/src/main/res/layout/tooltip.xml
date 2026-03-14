@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/tooltip_topframe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tooltip_topframe_height"
+        android:background="@color/edit_text_input_color"
+        android:layout_marginTop="@dimen/tooltip_topframe_margin_top" />
+
+    <ImageView
+        android:id="@+id/tooltip_pointer_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/tooltip_cd_tooltip_pointer_up"
+        android:src="@drawable/tooltip_arrow_up" />
+
+    <FrameLayout
+        android:id="@+id/tooltip_contentholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_below="@id/tooltip_topframe"
+        android:layout_marginTop="@dimen/tooltip_contentholder_margin_top"
+        android:paddingLeft="@dimen/tooltip_contentholder_padding"
+        android:paddingRight="@dimen/tooltip_contentholder_padding"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/tooltip_contenttv"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:padding="@dimen/small_padding"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/tooltip_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tooltip_shadow_height"
+        android:background="@drawable/quickcontact_drop_shadow"
+        android:layout_below="@id/tooltip_contentholder"
+        android:layout_marginTop="@dimen/tooltip_shadow_margin_top" />
+
+    <FrameLayout
+        android:id="@+id/tooltip_bottomframe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tooltip_bottomframe_height"
+        android:background="@color/edit_text_input_color"
+        android:layout_below="@id/tooltip_contentholder" />
+
+    <ImageView
+        android:id="@+id/tooltip_pointer_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tooltip_bottomframe"
+        android:layout_marginTop="@dimen/tooltip_point_margin_top"
+        android:contentDescription="@string/tooltip_cd_tooltip_pointer_down"
+        android:src="@drawable/tooltip_arrow_down" />
+
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/music_playpanel_color"
+    android:orientation="horizontal"
+    android:padding="@dimen/normal_padding" >
+
+    <ImageView
+        android:id="@+id/trackCover"
+        android:layout_width="@dimen/notification_player_big_icon_size"
+        android:layout_height="@dimen/notification_player_big_icon_size"
+        android:src="@drawable/ic_default_cover_loading" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/normal_padding" >
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/icon_width_xsmall"
+            android:layout_height="@dimen/icon_width_xsmall"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_cancel_grey" />
+
+        <TextView
+            android:id="@+id/trackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:maxLines="1"
+            android:paddingTop="@dimen/normal_padding"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trackName"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:maxLines="1"
+            android:textColor="@color/light_text_color"
+            android:textSize="@dimen/text_size_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/artistName"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/playbackStop"
+                style="@style/DeezerPlayback.Button"
+                android:layout_marginRight="@dimen/xlarge_margin"
+                android:src="@drawable/ic_action_previous_grey" />
+
+            <ImageButton
+                android:id="@+id/playbackPlayPause"
+                style="@style/DeezerPlayback.Button"
+                android:layout_marginRight="@dimen/xlarge_margin"
+                android:src="@drawable/ic_action_play_green" />
+
+            <ImageButton
+                android:id="@+id/playbackNext"
+                style="@style/DeezerPlayback.Button"
+                android:src="@drawable/ic_action_forward_white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.projectgoth.ui.widget.RelativeLayoutEx xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:id="@+id/start_chat_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/search_user_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/large_padding"
+        android:paddingTop="@dimen/normal_padding"
+        android:paddingRight="@dimen/large_padding"
+        android:paddingBottom="@dimen/normal_padding"
+        android:background="@color/start_chat_search_bg" >
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="@dimen/icon_width_xxsmall"
+            android:layout_height="@dimen/icon_height_xxsmall"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:src="@drawable/ad_search_grey"
+            android:contentDescription="@string/fragment_start_chat_cd_search_icon"
+            android:scaleType="fitXY" />
+
+        <com.projectgoth.ui.widget.ScrollViewEx
+            android:id="@+id/selected_scroll_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/search_icon"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:paddingLeft="@dimen/normal_margin"
+            android:paddingRight="@dimen/normal_margin"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:background="@drawable/start_chat_search_box_bg">
+
+            <com.projectgoth.ui.widget.SelectedItemBox
+                android:id="@+id/selected_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                mig33:horizontalSpace="@dimen/small_margin"
+                mig33:verticalSpace="@dimen/small_margin" >
+            </com.projectgoth.ui.widget.SelectedItemBox>
+
+        </com.projectgoth.ui.widget.ScrollViewEx>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/friend_list_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/search_user_container" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_menu_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <com.projectgoth.ui.widget.ButtonEx
+            android:id="@+id/start_chat_button"
+            style="@style/Button.Default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/normal_margin"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="normal"
+            mig33:type="button_orange"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/msg_input_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</com.projectgoth.ui.widget.RelativeLayoutEx>

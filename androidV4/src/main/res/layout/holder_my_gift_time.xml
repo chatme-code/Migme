@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/time_gifts_cell_height"
+    android:background="@color/white">
+
+    <com.projectgoth.ui.widget.TimelineView
+        android:id="@+id/time_line"
+        android:layout_width="@dimen/timeline_view_width"
+        android:layout_height="@dimen/time_gifts_cell_height"
+        android:layout_marginLeft="@dimen/medium_margin" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_toRightOf="@+id/time_line"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/small_padding">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_margin">
+            <ImageView
+                android:id="@+id/time_label"
+                android:layout_width="@dimen/timeline_label_size"
+                android:layout_height="@dimen/timeline_label_size"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/received_month"
+                android:layout_width="@dimen/timeline_label_size"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/small_padding"
+                android:textColor="@color/dark_text_color"
+                android:textSize="@dimen/text_size_xxlarge"
+                android:textStyle="normal"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/time_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/normal_margin"
+            android:contentDescription="@string/header_gift_store_cd_arrow_right"
+            android:src="@drawable/ad_arrowright_grey" />
+        <TextView
+            android:id="@+id/received_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_toLeftOf="@+id/time_arrow_right"
+            android:paddingRight="@dimen/xxlarge_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_medium"/>
+        <TextView
+            android:id="@+id/received_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_toLeftOf="@+id/time_arrow_right"
+            android:layout_alignParentBottom="true"
+            android:paddingRight="@dimen/xxlarge_padding"
+            android:paddingBottom="@dimen/small_padding"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_xxxlarge"
+            android:textStyle="normal"/>
+    </RelativeLayout>
+</RelativeLayout>

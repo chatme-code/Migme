@@ -1,0 +1,46 @@
+insert into emoticonpack values( 13, 2, 'V4 Pack', null, 0.00, 1 );
+
+insert into emoticon values( 406, 13, 'M', 12, 12, '/usr/fusion/emoticons/v4/M_12.gif', '/usr/fusion/emoticons/v4/M_12.png');
+insert into emoticon values( 407, 13, 'M', 14, 14, '/usr/fusion/emoticons/v4/M_14.gif', '/usr/fusion/emoticons/v4/M_14.png');
+insert into emoticon values( 408, 13, 'M', 16, 16, '/usr/fusion/emoticons/v4/M_16.gif', '/usr/fusion/emoticons/v4/M_16.png');
+insert into emoticon values( 409, 13, 'I', 12, 12, '/usr/fusion/emoticons/v4/I_12.gif', '/usr/fusion/emoticons/v4/I_12.png');
+insert into emoticon values( 410, 13, 'I', 14, 14, '/usr/fusion/emoticons/v4/I_14.gif', '/usr/fusion/emoticons/v4/I_14.png');
+insert into emoticon values( 411, 13, 'I', 16, 16, '/usr/fusion/emoticons/v4/I_16.gif', '/usr/fusion/emoticons/v4/I_16.png');
+insert into emoticon values( 412, 13, 'G', 12, 12, '/usr/fusion/emoticons/v4/G_12.gif', '/usr/fusion/emoticons/v4/G_12.png');
+insert into emoticon values( 413, 13, 'G', 14, 14, '/usr/fusion/emoticons/v4/G_14.gif', '/usr/fusion/emoticons/v4/G_14.png');
+insert into emoticon values( 414, 13, 'G', 16, 16, '/usr/fusion/emoticons/v4/G_16.gif', '/usr/fusion/emoticons/v4/G_16.png');
+insert into emoticon values( 415, 13, '33', 12, 12, '/usr/fusion/emoticons/v4/33_12.gif', '/usr/fusion/emoticons/v4/33_12.png');
+insert into emoticon values( 416, 13, '33', 14, 14, '/usr/fusion/emoticons/v4/33_14.gif', '/usr/fusion/emoticons/v4/33_14.png');
+insert into emoticon values( 417, 13, '33', 16, 16, '/usr/fusion/emoticons/v4/33_16.gif', '/usr/fusion/emoticons/v4/33_16.png');
+insert into emoticon values( 418, 13, 'Dragon', 12, 12, '/usr/fusion/emoticons/v4/Dragon_12.gif', '/usr/fusion/emoticons/v4/Dragon_12.png');
+insert into emoticon values( 419, 13, 'Dragon', 14, 14, '/usr/fusion/emoticons/v4/Dragon_14.gif', '/usr/fusion/emoticons/v4/Dragon_14.png');
+insert into emoticon values( 420, 13, 'Dragon', 16, 16, '/usr/fusion/emoticons/v4/Dragon_16.gif', '/usr/fusion/emoticons/v4/Dragon_16.png');
+insert into emoticon values( 421, 13, 'migbot', 12, 12, '/usr/fusion/emoticons/v4/migbot_12.gif', '/usr/fusion/emoticons/v4/migbot_12.png');
+insert into emoticon values( 422, 13, 'migbot', 14, 14, '/usr/fusion/emoticons/v4/migbot_14.gif', '/usr/fusion/emoticons/v4/migbot_14.png');
+insert into emoticon values( 423, 13, 'migbot', 16, 16, '/usr/fusion/emoticons/v4/migbot_16.gif', '/usr/fusion/emoticons/v4/migbot_16.png');
+insert into emoticon values( 424, 13, 'Pink Flower', 12, 12, '/usr/fusion/emoticons/v4/PinkFlower_12.gif', '/usr/fusion/emoticons/v4/PinkFlower_12.png');
+insert into emoticon values( 425, 13, 'Pink Flower', 14, 14, '/usr/fusion/emoticons/v4/PinkFlower_14.gif', '/usr/fusion/emoticons/v4/PinkFlower_14.png');
+insert into emoticon values( 426, 13, 'Pink Flower', 16, 16, '/usr/fusion/emoticons/v4/PinkFlower_16.gif', '/usr/fusion/emoticons/v4/PinkFlower_16.png');
+
+insert into emoticonhotkey values( 625, 406, 1, '(m)' );
+insert into emoticonhotkey values( 626, 407, 1, '(m)' );
+insert into emoticonhotkey values( 627, 408, 1, '(m)' );
+insert into emoticonhotkey values( 622, 409, 1, '(i)' );
+insert into emoticonhotkey values( 623, 410, 1, '(i)' );
+insert into emoticonhotkey values( 624, 411, 1, '(i)' );
+insert into emoticonhotkey values( 619, 412, 1, '(g)' );
+insert into emoticonhotkey values( 620, 413, 1, '(g)' );
+insert into emoticonhotkey values( 621, 414, 1, '(g)' );
+insert into emoticonhotkey values( 613, 415, 1, '(33)' );
+insert into emoticonhotkey values( 614, 416, 1, '(33)' );
+insert into emoticonhotkey values( 615, 417, 1, '(33)' );
+insert into emoticonhotkey values( 616, 418, 1, '(reddragon)' );
+insert into emoticonhotkey values( 617, 419, 1, '(reddragon)' );
+insert into emoticonhotkey values( 618, 420, 1, '(reddragon)' );
+insert into emoticonhotkey values( 628, 421, 1, '(migbot)' );
+insert into emoticonhotkey values( 629, 422, 1, '(migbot)' );
+insert into emoticonhotkey values( 630, 423, 1, '(migbot)' );
+insert into emoticonhotkey values( 631, 424, 1, '(pinkflower)' );
+insert into emoticonhotkey values( 632, 425, 1, '(pinkflower)' );
+insert into emoticonhotkey values( 633, 426, 1, '(pinkflower)' );
+

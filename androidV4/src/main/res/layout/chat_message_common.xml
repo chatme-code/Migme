@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+            android:id="@+id/new_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/xsmall_margin"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingBottom="@dimen/xsmall_padding"
+            android:paddingTop="@dimen/xsmall_padding"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/white"
+            android:background="@drawable/new_messages_background"/>
+
+    <com.projectgoth.ui.widget.DateTextView
+            android:id="@+id/message_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_message"
+            android:layout_margin="@dimen/xsmall_margin"
+            android:gravity="center"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingBottom="@dimen/xsmall_padding"
+            android:paddingTop="@dimen/xsmall_padding"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/gray_text" />
+
+    <View
+            android:id="@+id/date_separator"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/chat_messages_spacing"
+            android:layout_below="@+id/message_date" />
+
+</merge>

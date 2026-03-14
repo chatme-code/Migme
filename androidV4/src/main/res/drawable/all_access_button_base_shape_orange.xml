@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval" xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <solid android:color="@color/orange" />
+    <stroke 
+        android:width="@dimen/all_access_button_base_shape_small_stroke_size" 
+        android:color="@color/white"/>
+
+</shape>

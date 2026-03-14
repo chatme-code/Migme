@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/chatroom_category_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/notification_group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/large_padding"
+        android:paddingLeft="@dimen/medium_padding"
+        android:paddingRight="@dimen/medium_padding"
+        android:paddingTop="@dimen/large_padding" >
+
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="@dimen/icon_width_xsmall"
+            android:layout_height="@dimen/icon_height_xsmall"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/xsmall_padding"
+            android:contentDescription="@string/holder_notification_group_cd_category_icon"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_toRightOf="@id/category_icon"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <TextView
+            android:id="@+id/notification_counter"
+            android:layout_width="@dimen/notification_screen_counter_width"
+            android:layout_height="@dimen/notification_screen_counter_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ad_counter_red"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/category_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/expandable_list_group_divider_height"
+        android:background="@color/expandable_list_group_divider_color" />
+
+</LinearLayout>

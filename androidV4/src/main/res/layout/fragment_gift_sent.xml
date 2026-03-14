@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gift_sent_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ad_gift_bg" >
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="@dimen/icon_width_small"
+        android:layout_height="@dimen/icon_height_small"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/normal_padding"
+        android:contentDescription="@string/fragment_gift_sent_cd_close_button"
+        android:src="@drawable/ad_close" />
+
+    <LinearLayout
+        android:id="@+id/center_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/bot_celebrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/fragment_gift_sent_cd_bot_celebrate"
+            android:src="@drawable/ad_bot_celebrate" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_xlarge" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/normal_margin"
+        android:gravity="center_horizontal"
+        android:textColor="@color/default_text"
+        android:textSize="@dimen/text_size_medium" />
+
+</RelativeLayout>

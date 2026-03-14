@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/playback_background" >
+
+    <LinearLayout
+        android:id="@+id/inline_playback_body"
+        android:layout_width="@dimen/playback_inline_body_width"
+        android:layout_height="@dimen/playback_inline_body_height"
+        android:orientation="horizontal"
+        android:padding="@dimen/playback_inline_body_padding" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/playback_inline_cover_height_width"
+            android:layout_height="@dimen/playback_inline_cover_height_width"
+            android:padding="@dimen/playback_inline_cover_padding" >
+
+            <ImageView
+                android:id="@+id/inline_album_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="album cover"
+                android:src="@drawable/ic_default_cover_loading" />
+
+            <ImageView
+                android:id="@+id/inline_playing_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="album cover"
+                android:cropToPadding="false"
+                android:src="@drawable/ic_cover_play" />
+
+            <view
+                android:id="@+id/inline_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
+                android:layout_centerInParent="true"
+                class="com.pascalwelsch.holocircularprogressbar.HoloCircularProgressBar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/deezerBanner"
+                android:layout_width="@dimen/playback_inline_deezer_banner_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/large_margin"
+                android:adjustViewBounds="false"
+                android:contentDescription="Deezer banner"
+                android:src="@drawable/ic_deezer_banner_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/controlBar"
+                android:layout_below="@+id/deezerBanner"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/inline_radio_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:textColor="@color/playback_label_green"
+                    android:textSize="@dimen/text_size_large" />
+
+                <TextView
+                    android:id="@+id/inline_artist_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:textColor="@color/playback_label_dark_grey"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    android:id="@+id/inline_track_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:textColor="@color/playback_label_light_grey"
+                    android:textSize="@dimen/text_size_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/controlBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/playback_inline_control_bar_height"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/inline_previous_song"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="previous song"
+                    android:src="@drawable/ic_action_previous_grey" />
+
+                <ImageButton
+                    android:id="@+id/inline_playAndPause"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="Start or pause"
+                    android:src="@drawable/ic_action_play_green" />
+
+                <ImageButton
+                    android:id="@+id/inline_next_song"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="next song"
+                    android:src="@drawable/ic_action_forward_grey" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

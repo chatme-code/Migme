@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/base_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingTop="@dimen/normal_padding" >
+
+        <ImageView
+            android:id="@+id/display_pic"
+            android:layout_width="@dimen/contact_pic_size_medium"
+            android:layout_height="@dimen/contact_pic_size_medium"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/normal_padding"
+            android:layout_marginTop="@dimen/small_margin"
+            android:contentDescription="@string/mini_profile_cd_display_pic"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_default_avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/small_margin"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/default_green"
+                android:textSize="@dimen/text_size_xlarge"
+                android:textStyle="normal" />
+
+            <com.projectgoth.ui.widget.UserBasicDetails
+                android:id="@+id/user_basic_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/status_container_upshadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/up_shadow_height"
+        android:layout_below="@id/base_profile"
+        android:background="@color/gray_background" />
+
+    <LinearLayout
+        android:id="@+id/status_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status_container_upshadow"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/small_padding" >
+
+        <RelativeLayout
+            android:id="@+id/presence_container"
+            android:layout_width="@dimen/icon_width_small"
+            android:layout_height="@dimen/icon_height_small"
+            android:layout_marginLeft="@dimen/normal_margin" >
+
+            <ImageView
+                android:id="@+id/presence"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/mini_profile_cd_presence"
+                android:padding="@dimen/normal_padding"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/overflow_marker"
+                android:layout_width="@dimen/overflow_marker_width"
+                android:layout_height="@dimen/overflow_marker_height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/mini_profile_cd_overflow_marker"
+                android:scaleType="fitXY"
+                android:src="@drawable/ad_solidarrow_black"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/presence_arrow"
+            android:layout_width="@dimen/icon_width_small"
+            android:layout_height="@dimen/icon_width_small"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/mini_profile_cd_presence_arrow"
+            android:padding="@dimen/normal_padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/ad_arrowdown_grey" >
+        </ImageView>
+
+        <EditText
+            android:id="@+id/status_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:contentDescription="@string/mini_profile_cd_status_msg"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_medium" />
+
+        <ImageView
+            android:id="@+id/status_tick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:contentDescription="@string/mini_profile_cd_status_tick"
+            android:gravity="center_vertical"
+            android:src="@drawable/ad_tick_green"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/up_shadow_height"
+        android:layout_below="@id/status_container"
+        android:background="@color/gray_background" />
+
+</merge>

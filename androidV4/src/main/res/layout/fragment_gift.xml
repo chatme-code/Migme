@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.projectgoth.ui.widget.RelativeLayoutEx xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:id="@+id/main_gift_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/normal_margin"
+    android:background="@drawable/rounded_corner_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/gift_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/normal_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/gift_image"
+            android:layout_width="@dimen/item_height_normal"
+            android:layout_height="@dimen/item_height_normal"
+            android:layout_margin="@dimen/small_margin"
+            android:contentDescription="@string/fragment_gift_cd_gift_image"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/gift_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_margin"
+            android:singleLine="true"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/gift_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:singleLine="true"
+            android:textColor="@color/default_timestamp"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selected_gift_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gift_details_container"
+        android:layout_margin="@dimen/normal_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="@dimen/normal_padding"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/number_of_recipients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="@dimen/normal_padding"
+            android:singleLine="true"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_padding"
+            android:singleLine="true"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/premium_gift_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selected_gift_details"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/label_premium"
+            android:layout_width="@dimen/label_size"
+            android:layout_height="@dimen/label_size"
+            android:layout_gravity="top"
+            android:contentDescription="@string/fragment_gift_cd_label_premium"
+            android:scaleType="fitXY"
+            android:src="@drawable/ab_store_pgift"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/premium_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="italic"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/premium_gift_details"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginTop="@dimen/normal_margin" />
+
+    <ScrollView
+        android:id="@+id/scroll_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/separator"
+        android:layout_margin="@dimen/normal_margin"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/large_padding" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin" >
+
+            <TextView
+                android:id="@+id/command_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/normal_padding"
+                android:textColor="@color/default_text"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/recipient_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/command_tip"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:singleLine="true"
+                android:textColor="@color/default_text"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="normal" />
+
+            <RelativeLayout
+                android:id="@+id/recipients_container"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/selected_recipient_panel_height"
+                android:layout_below="@+id/recipient_label"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:background="@drawable/border_textbox"
+                android:padding="@dimen/small_padding" >
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:fillViewport="true"
+                    android:orientation="vertical" >
+
+                    <com.projectgoth.ui.widget.FlowLayout
+                        android:id="@+id/selected_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        mig33:horizontalSpace="@dimen/normal_margin"
+                        mig33:verticalSpace="@dimen/normal_margin" >
+
+                        <TextView
+                            android:id="@+id/container_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/small_padding"
+                            android:textColor="@color/default_hint"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="normal" />
+                    </com.projectgoth.ui.widget.FlowLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/message_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recipients_container"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:singleLine="true"
+                android:textColor="@color/default_text"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/message_label"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:background="@drawable/border_textbox"
+                android:contentDescription="@string/fragment_gift_cd_message"
+                android:padding="@dimen/small_padding"
+                android:singleLine="true"
+                android:textColor="@color/default_text"
+                android:textSize="@dimen/text_size_large" >
+            </EditText>
+
+            <CheckBox
+                android:id="@+id/checkbox_private_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/message"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:button="@drawable/checkbox_border_state"
+                android:contentDescription="@string/fragment_gift_cd_checkbox_private_gift"
+                android:textSize="@dimen/text_size_small" />
+
+            <CheckBox
+                android:id="@+id/checkbox_post_to_miniblog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkbox_private_gift"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:button="@drawable/checkbox_border_state"
+                android:contentDescription="@string/fragment_gift_cd_checkbox_post_to_miniblog"
+                android:textSize="@dimen/text_size_small" />
+
+            <com.projectgoth.ui.widget.ButtonEx
+                android:id="@+id/send_gift_button"
+                style="@style/Button.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkbox_post_to_miniblog"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="normal"
+                mig33:type="button_orange" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/friend_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/small_margin"
+        android:background="@drawable/rounded_corner"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_padding"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/friend_list_filter"
+            style="@style/Form.TextField.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_textbox"
+            android:contentDescription="@string/fragment_gift_cd_friend_list_filter"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true" />
+
+        <ListView
+            android:id="@+id/friend_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/fragment_gift_cd_friend_list" />
+    </LinearLayout>
+
+</com.projectgoth.ui.widget.RelativeLayoutEx>

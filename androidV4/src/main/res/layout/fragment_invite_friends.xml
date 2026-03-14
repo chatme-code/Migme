@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_background" >
+
+    <RelativeLayout
+            android:id="@+id/sub_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_padding" >
+
+        <TextView
+            android:id="@+id/search_by_contacts"
+            style="@style/InviteFriendsSectionBar"
+            android:drawableLeft="@drawable/ad_contact_grey" />
+
+        <TextView
+            android:id="@+id/invite_via_facebook"
+            style="@style/InviteFriendsSectionBar"
+            android:drawableLeft="@drawable/ad_facebook_blue"
+            android:layout_below="@+id/search_by_contacts" />
+
+        <TextView
+            android:id="@+id/invite_via_email"
+            style="@style/InviteFriendsSectionBar"
+            android:drawableLeft="@drawable/ad_mail_grey"
+            android:layout_below="@+id/invite_via_facebook" />
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/recommended_people"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/icon_height_normal"
+            android:textSize="@dimen/text_size_xxlarge"
+            android:background="@color/white"
+            android:padding="@dimen/normal_padding"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_text"
+            android:layout_marginBottom="@dimen/xsmall_margin"
+            android:layout_below="@+id/sub_container" />
+
+    <FrameLayout
+            android:id="@+id/ad_recommended_fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/recommended_people"/>
+        
+</RelativeLayout>

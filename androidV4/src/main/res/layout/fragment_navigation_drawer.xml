@@ -1,0 +1,25 @@
+<com.projectgoth.ui.widget.tooltip.ToolTipRelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".NavigationDrawerFragment" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:cacheColorHint="@color/black"
+                android:divider="@color/white"
+                android:dividerHeight="@dimen/list_divider_height"
+                android:drawSelectorOnTop="false"
+                android:fadeScrollbars="true"
+                android:fadingEdge="none"
+                android:focusable="false"
+                android:layoutAnimation="@anim/listview_layoutanimation"
+                android:focusableInTouchMode="false" />
+
+</com.projectgoth.ui.widget.tooltip.ToolTipRelativeLayout>

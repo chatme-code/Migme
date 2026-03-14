@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:migme="http://schemas.android.com/apk/res/com.projectgoth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background" >
+    <TextView
+        android:id="@+id/hot_topic_title"
+        style="@style/SectionTitle" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hot_topic_title"
+        android:padding="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/normal_margin">
+	    <com.projectgoth.ui.widget.FlowLayout
+	        android:id="@+id/hot_topics_container"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/hot_topic_title"
+	        android:layout_margin="@dimen/normal_margin"
+	        migme:horizontalSpace="@dimen/medium_margin"
+	        migme:verticalSpace="@dimen/medium_margin" >
+	    </com.projectgoth.ui.widget.FlowLayout>
+    </ScrollView>
+
+</RelativeLayout>

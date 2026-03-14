@@ -1,0 +1,204 @@
+apply plugin: 'com.android.application'
+
+description = 'migme android client'
+
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.3'
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven {
+        url 'https://tools.projectgoth.com/nexus/content/groups/public/'
+        credentials {
+            username System.getenv("NEXUS_USERNAME")
+            password System.getenv("NEXUS_PASSWORD")
+        }
+    }
+    jcenter()
+}
+
+apply plugin: 'io.fabric'
+
+dependencies {
+    compile 'com.google.code.gson:gson:1.7.2'
+    compile 'com.projectgoth:common-lib:0.0.5'
+    compile 'com.projectgoth.localization:localization-lib:0.0.4'
+    //Caution: checking the project exist or not is for jenkins
+    //         for development, recommend to sync the 4 dependencies below to local
+    //         sync paritially will have MultipleDex exception at build time
+    if (file('../client-miniblog/build.gradle').exists()) {
+        println "use local client-miniblog"
+        compile project(':client-miniblog')
+    } else {
+        println "use pre-build client-miniblog lib 0.0.45"
+        compile 'com.projectgoth.client-miniblog:client-miniblog:0.0.45-SNAPSHOT'
+    }
+    if (file('../mig33FusionClientService/build.gradle').exists()) {
+        println "use local mig33FusionClientService"
+        compile project(':mig33FusionClientService')
+    } else {
+        println "use pre-build mig33FusionClientService lib 0.0.83"
+        compile 'com.projectgoth.mig33FusionClientService:mig33FusionClientService:0.0.83-SNAPSHOT'
+    }
+    if (file('../mig33ClientNetworkService/build.gradle').exists()) {
+        println "use local mig33ClientNetworkService"
+        compile project(':mig33ClientNetworkService')
+    } else {
+        println "use pre-build mig33ClientNetworkService lib 0.0.78"
+        compile 'com.projectgoth:mig33ClientNetworkService:0.0.78-SNAPSHOT'
+    }
+    if (file('../mig33JavaClientFramework/build.gradle').exists()) {
+        println "use local mig33JavaClientFramework"
+        compile project(':mig33JavaClientFramework')
+    } else {
+        println "use pre-build mig33JavaClientFramework lib 0.0.37"
+        compile 'com.projectgoth.diggle:diggle:0.0.37-SNAPSHOT'
+    }
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    compile 'com.android.support:support-v4:19.0.1'
+    compile 'com.android.support:appcompat-v7:19.0.1'
+    compile 'com.android.support:support-annotations:21.0.0-rc1'
+    compile project(':facebookSDK')
+    compile 'com.fiksu.asotracking:fiksu:4.1.1'
+    compile 'com.google.android.gms:play-services-analytics:7.0.0'
+    compile 'com.samsung.spen:libspen:2.2.5'
+    compile 'com.samsung.spen:libspen_multiwindow:2.2.5'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.deezer.sdk:deezer:0.10.16'
+    compile('com.crashlytics.sdk.android:crashlytics:2.2.3@aar') {
+        transitive = true
+    }
+
+    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.1'
+    testCompile 'org.robolectric:robolectric:3.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+}
+
+project.ext.set("vasId", getVasId())
+
+android {
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+        versionCode 65
+        versionName "5.01.016"
+        archivesBaseName = "migmeDroid"
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("appsigning/debug/debug.keystore")
+            keyAlias "androiddebugkey"
+        }
+        release {
+            storeFile file("appsigning/keystore_2010_android.jks")
+            storePassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
+            keyAlias "mig33_oct2010"
+            keyPassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
+        }
+    }
+
+    lintOptions {
+        //FIXME: need to turn on lint check in the future
+        checkReleaseBuilds false
+    }
+
+    productFlavors {
+        full {
+
+        }
+        //special is for specific purpose, for example disable deezer region check
+        special {
+
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            signingConfig signingConfigs.debug
+        }
+        release {
+            ext.betaDistributionReleaseNotesFilePath = "deploy/release_note.txt"
+            ext.betaDistributionGroupAliasesFilePath = "deploy/group_aliases.txt"
+            signingConfig signingConfigs.release
+        }
+    }
+
+    applicationVariants.all { variant ->
+        createOutputFileName(variant, defaultConfig)
+    }
+
+    sourceSets {
+        main {
+            // Maven-standard layout (mirrors Migme/src/main/ backend structure)
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs     = ['src/main/java']
+            resources.srcDirs = ['src/main/java']
+            aidl.srcDirs     = ['src/main/java']
+            renderscript.srcDirs = ['src/main/java']
+            res.srcDirs      = ['src/main/res']
+            assets.srcDirs   = ['src/main/assets']
+            jniLibs.srcDirs  = ['libs']
+        }
+
+        androidTest {
+            java.srcDir('tests')
+        }
+
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+
+def createOutputFileName(variant, defaultConfig) {
+    String replaceRule
+    //default vas id is 001, keep original file name if vas id doesn't change
+    if (project.vasId == "001") {
+        replaceRule = "-" + defaultConfig.versionName + ".apk"
+    } else {
+        replaceRule = "-" + defaultConfig.versionName + "($project.vasId)" + ".apk"
+    }
+
+    variant.outputs.each { output ->
+        if (output.zipAlign) {
+            def file = output.outputFile
+            def fileName = file.name.replace(".apk", replaceRule)
+            output.outputFile = new File(file.parent, fileName)
+        }
+
+        def file = output.packageApplication.outputFile
+        def fileName = file.name.replace(".apk", replaceRule)
+        output.packageApplication.outputFile = new File(file.parent, fileName)
+    }
+}
+
+String getVasId() {
+    File configFile = file("src/main/assets/app.properties")
+    String buildId = ""
+    if (configFile.length() > 0) {
+        configFile.eachLine { line ->
+            if (line.contains("build.id=")) {
+                def (name, value) = line.tokenize("=")
+                buildId = value
+            }
+        }
+    } else {
+        println "cannot open assets/app.properties!!!"
+    }
+
+    return buildId.trim()
+}

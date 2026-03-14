@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_chat_list_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="@dimen/xlarge_margin"
+    android:orientation="vertical" >
+
+    <com.projectgoth.ui.widget.GifImageView
+        android:id="@+id/empty_chat_list_icon"
+        android:layout_width="@dimen/icon_width_xlarge"
+        android:layout_height="@dimen/icon_height_xlarge"     
+        android:layout_marginTop="@dimen/xlarge_margin"
+        android:src="@drawable/bubble_burst"
+        android:scaleType="fitCenter"/>
+    
+    <TextView
+        android:id="@+id/empty_chat_list_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/xxlarge_margin"
+        android:layout_marginRight="@dimen/xxlarge_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_xxlarge"
+        android:textColor="@color/empty_view_text" />
+
+    <TextView
+        android:id="@+id/empty_chat_list_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/xxlarge_margin"
+        android:layout_marginRight="@dimen/xxlarge_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_xlarge"
+        android:textColor="@color/empty_view_text" />
+    
+    <TextView
+        android:id="@+id/start_chat_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/xxlarge_margin"
+        android:layout_marginRight="@dimen/xxlarge_margin"
+        android:layout_marginTop="@dimen/xlarge_margin"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/default_green" />
+
+</LinearLayout>

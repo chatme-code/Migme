@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/large_padding"
+    android:paddingTop="@dimen/large_padding" >
+
+    <TextView
+        android:id="@+id/menu_gifts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ad_colgift"
+        android:gravity="center"
+        android:textColor="@color/number_color"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <TextView
+        android:id="@+id/menu_badges"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ad_colbadge"
+        android:gravity="center"
+        android:textColor="@color/number_color"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <TextView
+        android:id="@+id/menu_fans"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ad_colmyfan"
+        android:gravity="center"
+        android:textColor="@color/number_color"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <TextView
+        android:id="@+id/menu_fan_of"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ad_colfanof"
+        android:gravity="center"
+        android:textColor="@color/number_color"
+        android:textSize="@dimen/text_size_xlarge" />
+
+</LinearLayout>

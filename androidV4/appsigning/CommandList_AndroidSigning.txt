@@ -1,0 +1,23 @@
+KEYSTORE - keystore_2010_android.jks
+KEYSTORE ALIAS = mig33_OCT201
+CERT - May2009_cert
+PARENT_CERT - thawte_Primary_Root_CA.pem
+
+INPUT APK - unsigned apk from your IDE
+
+
+
+SKIP STEP 1 - 5, IF YOU ALREADY HAVE YOUR KEYS
+
+1)	keytool -genkey -keyalg RSA -keystore keystore_2010_android.jks -validity 20000 -alias mig33_OCT2010
+2)	keytool -import -v -alias tomcat -file thawte_Primary_Root_CA.pem -keystore keystore_2010_android.jks
+3)	keytool -list -v -keystore keystore_2010_android.jks	
+4)	keytool -import -v -alias tomcat -file May2009_cert -keystore keystore_2010_android.jks
+5)	keytool -printcert -v -file May2009_cert
+
+
+6)	jarsigner -verbose -keystore keystore_2010_android.jks Mig33Droid.apk mig33_oct2010
+7)	jarsigner -verify -verbose -certs Mig33Droid.apk
+8)	zipalign -v 4 Mig33Droid.apk out/Mig33Droid.apk
+
+NOTE on your IDE make sure you use the android tools-> export unsign package as an input file

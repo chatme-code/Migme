@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:migme="http://schemas.android.com/apk/res/com.projectgoth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/actions_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.projectgoth.ui.widget.IconCounterView
+            android:id="@+id/tab1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/normal_padding"
+            android:paddingTop="@dimen/normal_padding"
+            android:contentDescription="@string/header_bar_layout_cd_tab1"
+            migme:iconSize="@dimen/icon_width_xxsmall"
+            migme:iconToTextSpace="@dimen/small_margin"
+            migme:textSize="@dimen/text_size_large" />
+
+        <com.projectgoth.ui.widget.IconCounterView
+            android:id="@+id/tab2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/normal_padding"
+            android:paddingTop="@dimen/normal_padding"
+            android:contentDescription="@string/header_bar_layout_cd_tab2"
+            migme:iconSize="@dimen/icon_width_xxsmall"
+            migme:iconToTextSpace="@dimen/small_margin"
+            migme:textSize="@dimen/text_size_large" />
+
+        <com.projectgoth.ui.widget.IconCounterView
+            android:id="@+id/tab3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/normal_padding"
+            android:paddingTop="@dimen/normal_padding"
+            android:contentDescription="@string/header_bar_layout_cd_tab3"
+            migme:iconSize="@dimen/icon_width_xxsmall"
+            migme:iconToTextSpace="@dimen/small_margin"
+            migme:textSize="@dimen/text_size_large" />
+    </LinearLayout>
+
+    <!--
+     it is a linearlayout with the same width of tabs as the post actions linearlayout,
+     in this way the arrow image can be placed on the line so that they can be merged
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/arrow1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/icon_height_xxxsmall"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ad_arrowsolid_grey"
+            android:contentDescription="@string/header_bar_layout_cd_arrow1"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/arrow2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/icon_height_xxxsmall"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ad_arrowsolid_grey"
+            android:contentDescription="@string/header_bar_layout_cd_arrow2"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/arrow3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/icon_height_xxxsmall"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ad_arrowsolid_grey"
+            android:contentDescription="@string/header_bar_layout_cd_arrow3"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</RelativeLayout>

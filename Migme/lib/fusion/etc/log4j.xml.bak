@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+	<!--  APPENDERS -->
+	
+        <appender name="voiceaudit" class="org.apache.log4j.DailyRollingFileAppender">
+                <param name="File" value="${log.dir}/voiceaudit.log" />
+                <param name="Append" value="true" />
+
+                <layout class="org.apache.log4j.TTCCLayout">
+                                <param name="dateFormat" value="ISO8601" />
+                </layout>
+        </appender>
+
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.TTCCLayout">
+			<param name="dateFormat" value="ISO8601" />
+		</layout>
+	</appender>
+
+	<appender name="logfile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${log.dir}/${log.filename}.log" />
+		<param name="Append" value="true" />
+
+		<layout class="org.apache.log4j.TTCCLayout">
+			<param name="dateFormat" value="ISO8601" />
+		</layout>
+	</appender>
+
+        <appender name="authlogfile" class="org.apache.log4j.DailyRollingFileAppender">
+                <param name="File" value="${log.dir}/authentication.log" />
+                <param name="Append" value="true" />
+
+                <layout class="org.apache.log4j.TTCCLayout">
+                        <param name="dateFormat" value="ISO8601" />
+                </layout>
+        </appender>
+
+	<appender name="contactdeletedfile" class="org.apache.log4j.DailyRollingFileAppender">
+               	<param name="File" value="${log.dir}/contactdeleted.log" />
+                <param name="Append" value="true" />
+
+                <layout class="org.apache.log4j.TTCCLayout">
+                        <param name="dateFormat" value="ISO8601" />
+                </layout>
+        </appender>
+        
+        <appender name="chatroomaudit" class="org.apache.log4j.DailyRollingFileAppender">
+               	<param name="File" value="${log.dir}/chatroomaudit.log" />
+                <param name="Append" value="true" />
+
+                <layout class="org.apache.log4j.TTCCLayout">
+                        <param name="dateFormat" value="ISO8601" />
+                </layout>
+        </appender>
+        <appender name="gamesmetrics" class="org.apache.log4j.DailyRollingFileAppender">
+               	<param name="File" value="${log.dir}/gamesmetrics.log" />
+                <param name="Append" value="true" />
+
+                <layout class="org.apache.log4j.TTCCLayout">
+                        <param name="dateFormat" value="ISO8601" />
+                </layout>
+        </appender>
+	<appender name="warnerrorlog" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${log.dir}/${log.filename}.error.log" />
+		<param name="Append" value="true" />
+
+		<layout class="org.apache.log4j.TTCCLayout">
+			<param name="dateFormat" value="ISO8601" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="WARN" />
+		</filter>
+	</appender>
+  	
+	<appender name="email" class="org.apache.log4j.net.SMTPAppender">
+		<param name="SMTPHost" value="mail.sjc01.projectgoth.com"/>
+		<param name="From" value="it@mon01.sjc01.projectgoth.com"/>
+		<param name="To" value="it@mig33global.com"/>
+		<param name="Subject" value="SJC01 Fusion Alert"/>
+		<layout class="org.apache.log4j.TTCCLayout">
+			<param name="dateFormat" value="ISO8601" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="ERROR" />
+		</filter>
+	</appender>
+	
+	<!-- MIG33 LOGGERS -->
+
+	<logger name="rewardsystem">
+		<level value="DEBUG"/>
+	</logger>
+	
+        <logger name="voiceengine">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="cache">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="profile">
+                <level value="DEBUG"/>
+        </logger>
+	
+        <logger name="com.projectgoth.fusion.gateway.stats">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="gateway">
+                <level value="DEBUG"/>
+        </logger>
+
+	<logger name="registry.RegistryI">
+                <level value="DEBUG"/>
+	</logger>
+
+        <logger name="objectcache">
+                <level value="DEBUG"/>
+        </logger>
+
+	<logger name="msn">
+		<level value="DEBUG"/>
+	</logger>
+       
+         <logger name="gtalk">
+                 <level value="DEBUG"/>
+         </logger>
+        
+         <logger name="facebook">
+                 <level value="DEBUG"/>
+         </logger>
+
+        <logger name="bl1">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="maintenance">
+                <level value="DEBUG"/>
+        </logger>
+
+	<logger name="smsengine">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="userevent.store">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="userevent.system">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="com.projectgoth.fusion.chatnewsfeed.CricketFeed">
+                <level value="INFO"/>
+        </logger>
+
+        <logger name="uns">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="uns.task">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="common.ValidationUtils">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="gateway.packet.FusionPktJoinChatRoom">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="gateway.ConnectionHTTP">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="authentication">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="AuthenticationLog" additivity="false">
+                <level value="DEBUG"/>
+                <appender-ref ref="authlogfile"/>
+        </logger>
+
+	<logger name="ContactDeletedLog">
+		<level value="INFO"/>
+		<appender-ref ref="contactdeletedfile"/>
+	</logger>
+
+        <logger name="botservice">
+                <level value="DEBUG"/>
+        </logger>
+
+       <logger name="com.projectgoth.fusion.botservice.BotService">
+                <level value="DEBUG"/>
+        </logger>
+
+        <logger name="sessioncache">
+                <level value="DEBUG"/>
+        </logger>
+
+	<logger name="paintwars">
+		<level value="DEBUG"/>
+	</logger>
+    
+    <logger name="ChatroomAudit">
+        <level value="INFO"/>
+        <appender-ref ref="chatroomaudit" />
+    </logger>
+
+    <logger name="gamesBotMetricsLog">
+        <level value="INFO"/>
+        <appender-ref ref="gamesmetrics" />
+    </logger>
+	<!-- THIRD PARTY LOGGERS -->
+	
+	<logger name="c3p0">
+		<level value="INFO"/>
+	</logger>
+	
+	<logger name="com.danga">
+		<level value="WARN"/>
+	</logger>
+	
+	<logger name="com.mchange">
+		<level value="INFO"/>
+	</logger>
+	
+	<logger name="log.MLog">
+		<level value="INFO"/>
+	</logger>
+	
+	<logger name="MySQL">
+		<level value="INFO"/>
+	</logger>
+	
+	<logger name="org.apache.commons">
+		<level value="WARN"/>
+	</logger>
+	
+	<logger name="org.springframework">
+		<level value="INFO"/>
+	</logger>
+	 
+        <logger name="org.jivesoftware.smack">
+                <level value="WARN"/>
+        </logger>
+
+        <logger name="org.xmlpull.mxp1">
+                <level value="WARN"/>
+        </logger>
+
+       <logger name="VoiceAudit">
+                <level value="INFO"/>
+                <appender-ref ref="voiceaudit" />
+       </logger>
+    <root>
+		<priority value="INFO" />
+		<appender-ref ref="logfile" />
+		<!--   <appender-ref ref="email" /> -->
+		<!--  <appender-ref ref="warnerrorlog" /> -->
+		<!--  <appender-ref ref="console" /> -->
+	</root>
+</log4j:configuration>

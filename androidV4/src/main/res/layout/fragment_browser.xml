@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+        
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadeScrollbars="true"
+        android:focusable="true"
+        android:contentDescription="@string/fragment_browser_cd_webview"
+        android:focusableInTouchMode="true" />
+
+    <com.projectgoth.ui.widget.GifImageView
+        android:id="@+id/progress"
+        android:layout_width="@dimen/icon_width_large"
+        android:layout_height="@dimen/icon_height_large"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

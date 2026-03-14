@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/small_padding"
+    android:paddingRight="@dimen/small_padding">
+
+    <ImageView
+        android:id="@+id/add_btn"
+        android:layout_width="@dimen/contact_pic_size_small"
+        android:layout_height="@dimen/contact_pic_size_small"
+        android:scaleType="fitCenter"/>
+
+    <!-- just to keep the same position of ImageView as ImageViews in other types of items
+     in the same list-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:textSize="@dimen/text_size_small" />
+
+</LinearLayout>

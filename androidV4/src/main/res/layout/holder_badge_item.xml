@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:id="@+id/badge_container"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="@dimen/normal_padding" >
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="@dimen/badge_icon_size"
+        android:layout_height="@dimen/badge_icon_size"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/holder_badge_item_cd_picture"
+        android:src="@drawable/ad_loadstatic_grey" />
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/normal_margin"
+                  android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textSize="@dimen/text_size_xlarge"
+                android:textColor="@color/default_text"/>
+
+        <TextView
+                android:id="@+id/timestamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="test"
+                android:textSize="@dimen/text_size_large"
+                android:textColor="@color/light_gray_text" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/favorite_gifts_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:background="@color/white"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:id="@+id/favorite_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/header_mygift_favorites"
+            android:src="@drawable/ad_favourite_pink" />
+
+        <TextView
+            android:id="@+id/favorite_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_toRightOf="@+id/favorite_icon"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <TextView
+            android:id="@+id/favorite_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_toRightOf="@+id/favorite_title"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <ImageView
+            android:id="@+id/favorite_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/header_gift_store_cd_arrow_right"
+            android:src="@drawable/ad_arrowright_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/favorite_gifts_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxsmall_margin"
+        android:background="@color/white">
+
+        <com.projectgoth.ui.widget.HorizontalListViewEx
+            android:id="@+id/favorite_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:paddingLeft="@dimen/small_padding" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/all_gifts_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:background="@color/white"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:id="@+id/all_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <TextView
+            android:id="@+id/all_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_toRightOf="@+id/all_title"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <ImageView
+            android:id="@+id/all_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/header_gift_store_cd_arrow_right"
+            android:src="@drawable/ad_arrowright_grey" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.projectgoth.ui.widget.RelativeLayoutEx xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:id="@+id/share_to_chat_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/search_user_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/start_chat_search_bg"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingLeft="@dimen/large_padding"
+        android:paddingRight="@dimen/large_padding"
+        android:paddingTop="@dimen/normal_padding" >
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="@dimen/icon_width_xxsmall"
+            android:layout_height="@dimen/icon_height_xxsmall"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:contentDescription="@string/fragment_start_chat_cd_search_icon"
+            android:scaleType="fitXY"
+            android:src="@drawable/ad_search_grey" />
+
+        <com.projectgoth.ui.widget.ScrollViewEx
+            android:id="@+id/selected_scroll_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_toRightOf="@id/search_icon"
+            android:background="@drawable/start_chat_search_box_bg"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/small_margin"
+            android:paddingLeft="@dimen/normal_margin"
+            android:paddingRight="@dimen/normal_margin"
+            android:paddingTop="@dimen/small_margin" >
+
+            <com.projectgoth.ui.widget.SelectedItemBox
+                android:id="@+id/selected_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                mig33:horizontalSpace="@dimen/small_margin"
+                mig33:verticalSpace="@dimen/small_margin" />
+        </com.projectgoth.ui.widget.ScrollViewEx>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/new_chat_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/start_chat_header_size"
+        android:layout_below="@+id/search_user_container"
+        android:layout_marginBottom="@dimen/xsmall_margin"
+        android:background="@color/white"
+        android:paddingRight="@dimen/normal_padding" >
+
+        <TextView
+            android:id="@+id/new_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/normal_padding"
+            android:textSize="@dimen/text_size_large" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/icon_width_xxxsmall"
+            android:layout_height="@dimen/icon_height_xxxsmall"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ad_arrowright_grey" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/recent_chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/start_chat_header_size"
+        android:layout_below="@id/new_chat_bar"
+        android:layout_marginBottom="@dimen/xsmall_margin"
+        android:background="@color/white"
+        android:gravity="center_vertical|left"
+        android:padding="@dimen/normal_padding"
+        android:textSize="@dimen/text_size_large" />
+
+    <FrameLayout
+        android:id="@+id/chat_list_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@id/recent_chat_title" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_height"
+            android:background="@color/start_chat_search_box_bg" />
+
+        <ImageView
+            android:id="@+id/button_send"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_chat_button"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/divider"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/normal_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/send_button" />
+
+        <EditText
+            android:id="@+id/share_msg_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/button_send"
+            android:background="@color/white"
+            android:padding="@dimen/normal_padding"
+            android:textColorHint="@color/default_hint"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+</com.projectgoth.ui.widget.RelativeLayoutEx>

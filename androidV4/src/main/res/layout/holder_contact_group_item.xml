@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/medium_padding" >
+
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="@dimen/icon_width_xxsmall"
+            android:layout_height="@dimen/icon_height_xxsmall"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/xsmall_padding"
+            android:src="@drawable/ad_grp_grey"
+            android:contentDescription="@string/holder_contact_group_item_cd_category_icon"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_toRightOf="@id/category_icon"
+            android:textColor="@color/friend_category_title_color"
+            android:textSize="@dimen/text_size_xlarge" />
+
+    </RelativeLayout>
+
+    <!--
+    the expandable list has different category divider and child item divider, the default attribute of Expandable list 
+    can not implement that properly, so the divider is added here
+    -->
+
+    <View
+        android:id="@+id/category_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/expandable_list_group_divider_height"
+        android:background="@color/expandable_list_group_divider_color" />
+
+</LinearLayout>

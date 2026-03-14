@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/small_padding"
+    android:paddingRight="@dimen/small_padding" >
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="@dimen/large_padding"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:paddingTop="@dimen/normal_padding" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_large" />
+
+        <GridView
+            android:id="@+id/emotional_footprints_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:stretchMode="none" />
+
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="@dimen/icon_width_xsmall"
+            android:layout_height="@dimen/icon_width_xsmall"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:contentDescription="@string/emotional_footprints_selection_cd_cancel"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_cancel" />
+    </RelativeLayout>
+
+</RelativeLayout>

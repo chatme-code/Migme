@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/small_margin"
+    android:id="@+id/container" >
+
+    <include layout="@layout/chat_message_common"/>
+
+     <!-- Contains a list of mime content views  -->
+     <LinearLayout
+         android:id="@+id/content_views_container"
+         android:layout_width="wrap_content" 
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/date_separator"
+         android:layout_alignWithParentIfMissing="true"
+         android:layout_centerInParent="true"
+         android:orientation="vertical"
+         android:visibility="gone" />
+
+</RelativeLayout>

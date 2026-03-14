@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mig_selection_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin">
+
+        <TextView
+            android:id="@+id/mig_selection_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@color/white"
+            android:padding="@dimen/medium_padding"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_large" />
+
+        <ImageView
+            android:id="@+id/arrow_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/normal_margin"
+            android:src="@drawable/ad_arrowdown_grey"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/header_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mig_selection_container"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/small_margin"
+        android:visibility="gone" />
+
+    <com.projectgoth.ui.widget.HorizontalListViewEx
+        android:id="@+id/mig_selection_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:fadeScrollbars="false"
+        android:fillViewport="false" />
+
+    <com.projectgoth.ui.widget.Spinner
+        android:id="@+id/genre_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/contact_pic_size_medium"
+        android:layout_margin="@dimen/normal_margin"
+        android:background="@color/white" />
+
+</LinearLayout>

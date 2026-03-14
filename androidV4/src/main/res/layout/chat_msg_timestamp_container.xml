@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/timestamp_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:gravity="right|center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/chat_messages_left_padding"
+    android:paddingRight="@dimen/chat_messages_right_padding" >
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/chat_timestamp_text"
+        android:textSize="@dimen/chat_timestamp_font"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@+id/msg_tick"
+        android:layout_width="@dimen/icon_width_xxxsmall"
+        android:layout_height="@dimen/icon_height_xxxsmall"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/chat_msg_timestamp_container_cd_msg_tick"
+        android:visibility="gone" />
+
+</LinearLayout>

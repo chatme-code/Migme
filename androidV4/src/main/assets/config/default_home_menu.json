@@ -1,0 +1,76 @@
+{
+      lang        : "en"
+    , v           : 0
+    , n_cols      : 0
+    , body_bg_url : null
+    , css_url     : null
+    , ctas        : [
+    	{
+              id         : "101"
+            , label      : "migWorld"
+            , icon_url   : "file://drawable/icon_home_migworld"
+            , action_url : "mig33:migWorld()"
+        },
+        {
+              id         : "102"
+            , label      : "Chatrooms"
+            , icon_url   : "file://drawable/icon_home_chatroom"
+            , action_url : "mig33:chat()"
+        },
+        {
+              id         : "103"
+            , label      : "Groups"
+            , icon_url   : "file://drawable/icon_home_groups"
+            , action_url : "mig33:mygroups()"
+        },
+        {
+              id         : "104"
+            , label      : "@Mentions"
+            , icon_url   : "file://drawable/icon_home_mentions"
+            , action_url : "mig33:mentions()"
+        },
+        {
+              id         : "105"
+            , label      : "Hot Topics"
+            , icon_url   : "file://drawable/icon_home_hottopic"
+            , action_url : "mig33:hotTopics()"
+        },
+        {
+              id         : "106"
+            , label      : "Watch List"
+            , icon_url   : "file://drawable/icon_home_watchlist"
+            , action_url : "mig33:watchlist()"
+        },
+		{
+              id         : "3"
+            , label      : "migGames"
+            , icon_url   : "file://drawable/icon_home_games"
+            , action_url : "mig33:url('migGames,/sites/touch/bot/bot_list?e=100,file://drawable/icon_home_games')"
+        },
+        {
+              id         : "8"
+            , label      : "Leaderboards"
+            , icon_url   : "file://drawable/icon_home_leaderboards"
+            , action_url : "mig33:url('Leaderboards,/sites/touch/leaderboard/home,file://drawable/icon_home_leaderboards')"
+        },
+        {
+              id         : "5"
+            , label      : "migStore"
+            , icon_url   : "file://drawable/icon_home_store"
+            , action_url : "mig33:url('migStore,/sites/touch/store/home_touch,file://drawable/icon_home_store')"
+        },
+        {
+              id         : "10"
+            , label      : "Merchant"
+            , icon_url   : "file://drawable/icon_home_merchant"
+            , action_url : "mig33:url('Merchant,/sites/touch/merchant/dashboard,file://drawable/icon_home_merchant')"
+        },
+        
+        {
+              id         : "9"
+            , label      : "My Account"
+            , icon_url   : "file://drawable/icon_home_account"
+            , action_url : "mig33:url('My Account,/sites/touch/account/home,file://drawable/icon_home_account')"
+        }
+      ]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emoticon_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/small_padding"
+    android:paddingRight="@dimen/small_padding">
+    
+    <ImageView
+        android:id="@+id/item"
+        android:layout_width="@dimen/gift_gridHeight"
+        android:layout_height="@dimen/gift_gridHeight"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/small_padding"
+        android:contentDescription="@string/holder_item_emoticon_cd_item"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/attachment_drawer_height"
+    android:gravity="center_vertical" >
+
+    <View android:id="@+id/top_line"
+          android:layout_width="fill_parent"
+          android:layout_height="@dimen/msg_input_drawer_separator"
+          android:layout_alignParentTop="true"
+          android:background="@color/msg_input_drawer_separator"/>
+
+    <LinearLayout
+        android:id="@+id/sticker_tabs_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sticker_pack_icon_size"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+ 		
+        <com.projectgoth.ui.widget.HorizontalListViewEx
+        	android:id="@+id/sticker_tabs"
+        	android:layout_width="0dip"
+        	android:layout_height="match_parent"
+        	android:layout_weight="1"
+        	android:fadeScrollbars="false"/>
+
+        <ImageView 
+            android:id="@+id/sticker_store"
+	        android:layout_width="@dimen/sticker_pack_icon_size"
+	        android:layout_height="@dimen/sticker_pack_icon_size"
+	        android:padding="@dimen/small_padding"
+	        android:src="@drawable/ic_menu_store"
+	        android:scaleType="fitCenter"
+            android:contentDescription="@string/fragment_sticker_drawer_cd_sticker_store"
+            android:background="@color/white" />
+        
+    </LinearLayout>
+
+    <View android:id="@+id/tabs_separator"
+          android:layout_above="@id/sticker_tabs_container"
+          android:layout_width="fill_parent"
+          android:layout_height="@dimen/msg_input_drawer_separator"
+          android:background="@color/msg_input_drawer_separator"/>
+
+    <FrameLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabs_separator"
+        android:layout_below="@id/top_line"/>
+
+</RelativeLayout>

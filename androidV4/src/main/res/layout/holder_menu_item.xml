@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/menu_item_bg"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/menu_item_padding"
+    android:paddingLeft="@dimen/normal_padding"
+    android:paddingRight="@dimen/normal_padding"
+    android:paddingTop="@dimen/menu_item_padding" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/list_menu_item_icon_width"
+        android:layout_height="@dimen/list_menu_item_icon_height"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:contentDescription="@string/holder_menu_item_cd_icon"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_toRightOf="@+id/icon"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="normal" />
+
+</RelativeLayout>

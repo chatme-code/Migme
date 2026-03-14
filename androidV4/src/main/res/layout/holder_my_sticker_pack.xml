@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/normal_padding"
+              android:background="@color/white_background">
+
+    <ImageView
+            android:id="@+id/sticker_pack_icon"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_normal"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/holder_my_sticker_pack_cd_sticker_pack_icon"
+            android:scaleType="fitXY" />
+
+    <TextView
+            android:id="@+id/sticker_pack_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/sticker_pack_icon"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/dark_text_color" />
+
+    <ToggleButton
+            android:id="@+id/toggle_button"
+            android:layout_width="@dimen/toggle_button_width"
+            android:layout_height="@dimen/toggle_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_toggle_bg"
+            android:contentDescription="@string/holder_my_sticker_pack_cd_toggle_button"
+            android:textOff=""
+            android:textOn=""/>
+
+</RelativeLayout>

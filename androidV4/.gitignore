@@ -1,0 +1,33 @@
+# Custom ignores
+build/
+bin/
+bak/
+gen/
+gen-external-apklibs/
+lint.xml
+res/values/com_crashlytics_export_strings.xml
+assets/crashlytics-build.properties
+local.properties
+
+# Eclipse
+.classpath
+.project
+project.properties
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+target/
+
+# Crashlytics
+crashlytics.properties
+
+#Gradle
+.gradle

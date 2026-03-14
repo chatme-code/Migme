@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="grey">#333333</color>
+    <color name="middle_grey">#777777</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_half_transparent">#BFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dim">#66000000</color>
+    <color name="orange">#FFF39426</color>
+    <color name="purple">#FFAA3CFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="login_error_background">#c0000000</color>
+    <color name="login_error_red">#C64F44</color>
+    <color name="login_line_background">#CCCCCC</color>
+    <color name="login_bot_background_default">#114c54</color>
+    <color name="light_gray">#FFCAD4DD</color>
+    <color name="gray_text">#FF808080</color>
+    <color name="dark_gray_text">#777777</color>
+    <color name="dim_gray">#FF645A55</color>
+    <color name="light_gray_text">#FF999999</color>
+    <color name="brown">#FF5A3C28</color>
+    <color name="light_brown">#FF918278</color>
+    <color name="light_beige">#F5F2E5</color>
+    <color name="dark_beige">#EEE9CC</color>
+    <color name="create_chatroom_comment_color">#CCCCCC</color>
+    <color name="dark_gray_background">#FFEEEEEE</color>
+    <color name="gray_background">#FFF7F7F7</color>
+    <color name="light_gray_background">#FF999999</color>
+    <color name="grey_separator">#A8ADB3</color>
+    <color name="beige_background">#F8F4EA</color>
+    <color name="white_background">#FFFFFF</color>
+    <color name="light_beige_separator">@color/dark_beige</color>
+    <color name="light_beige_background">@color/dark_beige</color>
+    <color name="light_gray_divider">#FFF5F5F5</color>
+    <color name="category_background">#F6F2E4</color>
+    <color name="message_date_background">#CCCCCC</color>
+    <color name="semi_transparent_white">#66FFFFFF</color>
+    <color name="twenty_transparent_white">#AAFFFFFF</color>
+    <color name="dark_sea_green">#FF145055</color>
+    <color name="lemon_chiffon">#FFFAF7EE</color>
+    <color name="pink">#FFF9EDEC</color>
+    <color name="red">#FFC75046</color>
+    <color name="fb_blue">#3D5A98</color>
+    <color name="alertpopup_stroke">#9E958E</color>
+    <color name="interstitial_banner_title_bg">#47AAAF</color>
+    <color name="interstitial_banner_content_bg">#E2F3FA</color>
+    <color name="interstitial_banner_content_text">#9E958E</color>
+    <color name="positivealert_title_bg">#CDBB8D</color>
+    <color name="positivealert_content_bg">#FFFADC</color>
+    <color name="positivealert_content_text">#9E958E</color>
+    <color name="progressbar_large_primaryprogress_bg_start">#00FF0000</color>
+    <color name="progressbar_large_primaryprogress_bg_end">#0000FF00</color>
+    <color name="progressbar_large_bg_start">#FF9D9E9D</color>
+    <color name="progressbar_large_bg_center">#FF5A5D5A</color>
+    <color name="progressbar_large_bg_end">#FF747674</color>
+    <color name="progressbar_large_secondaryprogress_bg_start">#000000</color>
+    <color name="progressbar_large_secondaryprogress_bg_center">#80FFB600</color>
+    <color name="progressbar_large_secondaryprogress_bg_end">#A0FFCB00</color>
+    <color name="white_text_color">@color/white</color>
+    <color name="dark_text_color">#FF424242</color>
+    <color name="music_playpanel_color">#FF424242</color>
+    <color name="light_text_color">#FF999999</color>
+    <color name="lighter_text_color">#FFD2CDC8</color>
+    <color name="actionbar_bg">#FF135055</color>
+    <color name="post_bg_shadow">#FFF0EDE6</color>
+    <color name="root_post_background">#f7f7f7</color>
+    <color name="post_bg_rect_solid">#FFFFFFFF</color>
+    <color name="tab_separator">#FFEEE3D2</color>
+    <color name="post_actions_divider">#FFEFDCBD</color>
+    <color name="share_box_container_bg">#FFD2CDC8</color>
+    <color name="share_box_actions_separator">#FFD2CDC8</color>
+    <color name="chat_input_empty_hint">#FF635A54</color>
+    <color name="menu_item_bg">#FFEDEDED</color>
+    <color name="black_half_transparent">#BF000000</color>
+    <color name="gift_preview_container">#FFEEEEEE</color>
+    <color name="text_dark">#FF383838</color>
+    <color name="text_light_gray">#FFCCCCCC</color>
+    <color name="promoted_color">#FFF59528</color>
+    <color name="logo_background">#FF09454A</color>
+    <color name="light_turquoise">#FFDFF2F1</color>
+    <color name="chat_item_highlighted">@color/light_turquoise</color>
+    <color name="chat_item_unhighlighted">@color/white</color>
+    <color name="light_green">#ff5e8286</color>
+    <color name="search_bar_green">#ff052E31</color>
+    <color name="left_profile_main">#fff5f5f5</color>
+    <color name="dark_green">#003C42</color>
+    <color name="number_color">#5A3C28</color>
+
+    <color name="chat_background">#FFEAEAEA</color>
+    <color name="chat_emote_text">#FF46AAAF</color>
+    <color name="chat_managed_by_background">#FF46AAAF</color>
+    <color name="chat_mention_background">#FFFFFAD2</color>
+    <color name="chat_incoming_background">#FFFFFFFF</color>
+    <color name="chat_outgoing_background">#FFCBFCDD</color>
+    <color name="chat_date_line">#FFCCCCCC</color>
+    <color name="chat_timestamp_text">#FF999999</color>
+    <color name="chat_pinnedholder_background">#424242</color>
+    <color name="new_messages_background">#FF999999</color>
+    <color name="mime_post_background">#FFF7F7FF</color>
+    <color name="mime_chatroom_background">#FFF7F7FF</color>
+
+    <color name="expandable_list_item_divider_color">#FFEDEDED</color>
+    <color name="expandable_list_group_divider_color">#FFEBEBEB</color>
+
+    <color name="game_divider_color">#FFDDDDDD</color>
+    <color name="play_seekbar_background">#FF979797</color>
+    <color name="play_seekbar_color">#FF64B9A0</color>
+    <color name="mig_channel_border">#FFEAEAEA</color>
+
+    <color name="chatroom_category_bg">@color/white</color>
+    <color name="chatroom_icon_green">#FF46AAAF</color>
+    <color name="chatroom_icon_bg_purple">#FF9F8CC0</color>
+    <color name="chatroom_icon_bg_red">#FF965374</color>
+    <color name="chatroom_icon_bg_brown">#FFBD5028</color>
+    <color name="chatroom_icon_bg_orange">#FFFF9800</color>
+    <color name="chatroom_item_bg">@color/gray_background</color>
+    <color name="chat_list_divider_color">#FFF5F5F5</color>
+    <color name="friend_category_title_color">@color/dark_text_color</color>
+    <color name="friend_category_title_unselectable">#FFEEEEEE</color>
+    <color name="start_chat_search_bg">#FFEEEEEE</color>
+    <color name="start_chat_search_box_bg">#FFDDDDDD</color>
+    <color name="friend_selected_bg">@color/light_turquoise</color>
+    <color name="friend_unselected_bg">@color/white</color>
+    <color name="friend_name_selectable">#FF61BAA0</color>
+    <color name="friend_name_unselectable">#FFEEEEEE</color>
+    <color name="select_user_box_cursor">#FF61BAA0</color>
+    <color name="start_chat_empty_view_text">@color/dark_text_color</color>
+    <color name="IM_contact_icon_selectable">#FFBBBBBB</color>
+    <color name="IM_contact_icon_selectunable">#FFEEEEEE</color>
+    <color name="msg_input_panel_divider">#FFEEEEEE</color>
+    <color name="msg_input_drawer_separator">#FFF7F7F7</color>
+    <color name="empty_view_text">@color/dark_text_color</color>
+    <color name="light_grey_border">#FFEEEEEE</color>
+    <color name="light_grey_divider">#FFEEEEEE</color>
+    <color name="edit_text_input_color">@color/dark_text_color</color>
+    <color name="disabled_button_text_color">@color/dark_text_color</color>
+
+    <color name="game_title">#FF64B9A0</color>
+    <!-- Tint colors -->
+    <color name="tint_lightgray">#CBCBCB</color>
+
+    <color name="filter_keyword_highlight_bg">#FFEDEDED</color>
+
+    <color name="time_line">#FF999999</color>
+    <color name="current_playing">#FF64B9A0</color>
+
+    <!-- New colours -->
+    <color name="detail_background">#CD000000</color>
+    <color name="default_text">#FF424242</color>
+    <color name="default_background">#FFEEEEEE</color>
+    <color name="default_timestamp">#FF999999</color>
+    <color name="default_green">#FF64B9A0</color>
+    <color name="progressbar_start">#FF64BAB0</color>
+    <color name="default_hint">#FFCCCCCC</color>
+
+    <!-- color for playback -->
+    <color name="playback_label_green">#64B9A0</color>
+    <color name="playback_label_dark_grey">#424242</color>
+    <color name="playback_label_white">#ffffff</color>
+    <color name="playback_label_light_grey">#999999</color>
+
+    <color name="playback_background_dark_grey">#424242</color>
+    <color name="playback_divider_grey">#DDDDDD</color>
+    <color name="playback_background_white">#FFFFFF</color>
+    <color name="playback_background">#FFF2F8FF</color>
+    <color name="playback_progress_green">#64B9A0</color>
+    <color name="playback_cover_background_grey">#66111111</color>
+
+    <color name="notify_dialog">#CC000000</color>
+
+    <!-- color for internet connection status -->
+    <color name="connection_back">#FF53CE77</color>
+    <color name="no_connection">#FFCA5445</color>
+    <color name="slow_connection">#FF999999</color>
+
+
+    <!-- signup -->
+    <color name="signup_error">#C64F44</color>
+    <color name="signup_normal">#114C54</color>
+    <color name="signup_peek_bg">#EF952B</color>
+    <color name="signup_input_text">#424242</color>
+    <color name="signup_divier_light_grey">#CCCCCC</color>
+    <color name="signup_text_light_grey">#CCCCCC</color>
+    <color name="signup_background_green">#114C54</color>
+
+    <color name="signup_text_red">#C64F44</color>
+    <color name="signup_suggested_name_background">#64B9A0</color>
+
+    <!-- non-login -->
+    <color name="default_orange">#F6921E</color>
+
+    <color name="splash_background">#003F42</color>
+
+    <!-- send gift -->
+    <color name="send_gift_divider">#EEEEEE</color>
+    <color name="recipient_container_bg">#F5F5F5</color>
+    <color name="gift_selected_bg">#EFF8F5</color>
+    <color name="gift_selected_bg_stroke_c">#D5ECE5</color>
+    <color name="gift_balance">#64B9A0</color>
+    <color name="gift_balance_red">#b94827</color>
+    <color name="gift_balance_black">#424242</color>
+    <color name="send_gift_button_normal">#EF952B</color>
+    <color name="send_gift_button_abnormal">#40EF952B</color>
+
+</resources>

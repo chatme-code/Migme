@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     This is a dummy focusable to stop auto edit text focus
+     See: http://stackoverflow.com/questions/1555109/stop-edittext-from-gaining-focus-at-activity-startup
+ -->
+<com.projectgoth.ui.widget.LinearLayoutEx xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:migme="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_header_height"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ad_star_bg">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ad_migme" />
+
+        <Button
+            android:id="@+id/login_btn_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:background="@null"
+            android:textColor="@color/default_green" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/normal_margin">
+
+            <Button
+                android:id="@+id/btn_to_login_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:textColor="@color/default_green" />
+
+            <ImageView
+                android:id="@+id/img_fragment_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ad_triangle_green" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/connection_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_large"
+        android:visibility="gone"
+        android:gravity="center"
+        android:paddingTop="@dimen/small_padding"
+        android:paddingBottom="@dimen/small_padding" />
+
+    <RelativeLayout
+        android:id="@+id/bot_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_bot_layout_height"
+        android:background="@color/login_bot_background_default"
+        android:layout_below="@id/connection_status">
+
+            <ImageView
+                android:id="@+id/img_bot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/xlarge_margin"
+                android:src="@drawable/ad_login_bot_purplehi" />
+
+            <TextView
+                android:id="@+id/txt_bot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/xlarge_margin_bot_text"
+                android:layout_marginRight="@dimen/xlarge_margin_bot_text"
+                android:layout_toRightOf="@id/img_bot"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_text_bot_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/signup_resend_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bot_layout">
+
+        <Button
+            android:id="@+id/signupResendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:padding="@dimen/signup_resend_button_padding"
+            android:textColor="@color/default_green" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/signin_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signup_resend_layout">
+
+        <EditText
+            android:id="@+id/txt_username"
+            style="@style/Form.TextField.Default.Login"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_marginRight="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/xsmall_margin"
+            android:hint="Username"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@+id/txt_password" />
+
+        <View
+            android:id="@+id/username_password_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txt_username"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginRight="@dimen/large_margin"
+            android:background="@color/login_line_background" />
+
+        <RelativeLayout
+            android:id="@+id/signin_password_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username_password_separator">
+
+
+            <ImageButton
+                android:id="@+id/btn_signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/medium_padding"
+                android:paddingLeft="@dimen/xlarge_padding"
+                android:paddingTop="@dimen/xsmall_padding"
+                android:paddingBottom="@dimen/xsmall_padding"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/medium_margin"
+                android:background="@color/transparent"
+                android:src="@drawable/ad_arrow_next" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/xlarge_margin"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/txt_password"
+                style="@style/Form.TextField.Default.Login"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:layout_toLeftOf="@id/btn_signin"
+                android:hint="Password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:nextFocusUp="@+id/txt_username" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/below_password_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/signin_password_input_layout"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginRight="@dimen/large_margin"
+            android:background="@color/login_line_background" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/below_password_separator">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/small_normal_padding"
+                    android:paddingRight="@dimen/normal_padding">
+
+                    <Button
+                        android:id="@+id/btn_showhide_password"
+                        style="@style/TextButton.Login.ForgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:minHeight="1dp"
+                        android:textColor="@color/default_green" />
+
+                    <com.projectgoth.ui.widget.HighlightTextButton
+                        android:id="@+id/btn_forgotpassword"
+                        style="@style/TextButton.Login.ForgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:minHeight="1dp"
+                        migme:highlightText="Forgot?"
+                        migme:highlightTextColor="@color/default_green"
+                        migme:text="Forgot?" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/captcha_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/captcha_input_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/btn_signin_captcha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/large_margin"
+                            android:background="@color/transparent"
+                            android:src="@drawable/ad_arrow_next" />
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_captcha"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/large_margin"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/txt_captcha"
+                            style="@style/Form.TextField.Default.Login"
+                            android:layout_marginLeft="@dimen/normal_margin"
+                            android:layout_marginRight="@dimen/normal_margin"
+                            android:layout_toLeftOf="@id/btn_signin_captcha"
+                            android:hint="Code"
+                            android:imeOptions="actionDone" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/captcha_separator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/captcha_input_row"
+                        android:layout_marginLeft="@dimen/large_margin"
+                        android:layout_marginRight="@dimen/large_margin"
+                        android:background="@color/login_line_background" />
+
+                    <TextView
+                        android:id="@+id/txt_enter_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/captcha_separator"
+                        android:layout_below="@id/captcha_separator"
+                        android:layout_marginTop="@dimen/xxsmall_margin"
+                        android:textColor="@color/login_line_background"
+                        android:textSize="@dimen/text_size_small_medium" />
+
+                    <ImageView
+                        android:id="@+id/img_captcha"
+                        android:layout_width="@dimen/captcha_image_width"
+                        android:layout_height="@dimen/captcha_image_height"
+                        android:layout_alignLeft="@id/txt_enter_hint"
+                        android:layout_below="@id/txt_enter_hint"
+                        android:layout_marginTop="@dimen/small_margin" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10" />
+
+                <com.projectgoth.ui.widget.DateTextView
+                    android:id="@+id/or_line_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/xsmall_padding"
+                    android:paddingLeft="@dimen/xxxxlarge_padding"
+                    android:paddingRight="@dimen/xxxxlarge_padding"
+                    android:paddingTop="@dimen/xsmall_padding"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="@dimen/text_size_small" />
+
+                <com.projectgoth.ui.widget.HighlightTextButton
+                    android:id="@+id/btn_fbconnect"
+                    style="@style/TextButton.Login.ForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@null"
+                    android:drawableBottom="@color/transparent"
+                    android:drawableLeft="@drawable/ad_facebook_blue"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:minHeight="1dp"
+                    migme:highlightText="Connect with Facebook"
+                    migme:highlightTextColor="@color/fb_blue"
+                    migme:text="Connect with Facebook"
+                    migme:textColor="@color/white" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <RelativeLayout
+                    android:id="@+id/terms_of_use_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_terms_of_use"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_small_medium" />
+
+                    <TextView
+                        android:id="@+id/txt_terms_of_use_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txt_terms_of_use"
+                        android:textColor="@color/default_green"
+                        android:textSize="@dimen/text_size_small_medium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/privacy_policy_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_privacy_policy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/text_size_small_medium" />
+
+                    <TextView
+                        android:id="@+id/txt_privacy_policy_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txt_privacy_policy"
+                        android:textColor="@color/default_green"
+                        android:textSize="@dimen/text_size_small_medium" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/padding_above_discover"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_conn_settings"
+                        android:layout_width="@dimen/icon_width_xsmall"
+                        android:layout_height="@dimen/icon_width_xsmall"
+                        android:layout_marginLeft="@dimen/normal_margin"
+                        android:layout_marginTop="@dimen/small_normal_margin"
+                        android:contentDescription="@string/fragment_login_form_cd_img_conn_settings"
+                        android:scaleType="center"
+                        android:src="@drawable/ad_setting_green"
+                        migme:layout_autoHideWhenSoftKeyboardPresent="true" />
+
+                    <com.projectgoth.ui.widget.TextButton
+                        android:id="@+id/btn_discover"
+                        style="@style/TextButton.Discover"
+                        android:layout_width="@dimen/button_width_xlarge"
+                        android:layout_height="@dimen/button_height_normal"
+                        android:layout_centerHorizontal="true"
+                        migme:text="PEEK INSIDE" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/mask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_half_transparent"
+                android:clickable="true"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</com.projectgoth.ui.widget.LinearLayoutEx>

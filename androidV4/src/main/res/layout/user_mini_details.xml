@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/menu_gifts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="@string/user_mini_details_cd_menu_gift"
+        android:drawableTop="@drawable/ad_colgift"
+        android:gravity="center"
+        android:textColor="@color/default_text"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <TextView
+        android:id="@+id/menu_badges"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="@string/user_mini_details_cd_menu_badges"
+        android:drawableTop="@drawable/ad_colbadge"
+        android:gravity="center"
+        android:textColor="@color/default_text"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <TextView
+        android:id="@+id/menu_fans"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="@string/user_mini_details_cd_menu_fans"
+        android:drawableTop="@drawable/ad_colmyfan"
+        android:gravity="center"
+        android:textColor="@color/default_text"
+        android:textSize="@dimen/text_size_xlarge" />
+
+</merge>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- wrapping the mini Profile is necessary, otherwise there's a bug if hiding the mini profile when the virtual keyboard is shown -->
+
+    <com.projectgoth.ui.widget.MiniProfile
+        android:id="@+id/mini_profile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_category"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/icon_height_normal"
+    android:paddingLeft="@dimen/small_padding"
+    android:paddingRight="@dimen/normal_padding"
+    android:background="@color/category_background">
+
+    <TextView
+        android:id="@+id/groupname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/childview_margin"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+	    android:paddingLeft="@dimen/small_padding" 
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingTop="@dimen/normal_padding"
+        android:textSize="@dimen/text_size_xlarge"
+        android:textColor="@color/default_text"/>
+
+    <ImageView
+        android:id="@+id/grouprefresh"
+        android:layout_width="@dimen/icon_width_xxsmall"
+        android:layout_height="@dimen/icon_width_xxsmall"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/holder_list_category_cd_grouprefresh"
+        android:src="@drawable/ic_group_refresh" />
+
+    <ToggleButton
+        android:id="@+id/togglebutton"
+        android:layout_width="@dimen/toggle_button_width"
+        android:layout_height="@dimen/toggle_button_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/small_margin"
+        android:background="@drawable/btn_toggle_bg"
+        android:contentDescription="@string/holder_list_category_cd_togglebutton"
+        android:textOff=""
+        android:textOn=""
+        android:visibility="gone" />
+
+</RelativeLayout>

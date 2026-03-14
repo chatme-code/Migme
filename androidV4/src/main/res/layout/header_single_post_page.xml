@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/red"
+    android:layout_height="wrap_content" >
+
+    <include
+        android:id="@+id/post_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/post_list_margin"
+        android:layout_marginRight="@dimen/post_list_margin"
+        android:layout_marginTop="@dimen/post_list_margin"
+        layout="@layout/holder_post_list_item" >
+    </include>
+
+    <com.projectgoth.ui.widget.HeaderBar
+        android:id="@+id/spp_actions_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:layout_below="@id/post_container" />
+
+    <FrameLayout
+        android:id="@+id/empty_view_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spp_actions_container"
+        android:background="@color/dark_gray_background"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <com.projectgoth.ui.widget.EmoticonGridView
+        android:id="@+id/emote_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spp_actions_container"
+        android:background="@color/dark_gray_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/small_padding"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

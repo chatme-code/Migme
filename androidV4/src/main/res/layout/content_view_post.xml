@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:background="@color/mime_post_background"
+    android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/post_photo"
+            android:layout_width="@dimen/mime_photo_thumbnail_size"
+            android:layout_height="@dimen/mime_photo_thumbnail_size"
+            android:scaleType="centerCrop"
+            android:visibility="gone"/>
+
+    <RelativeLayout
+            android:id="@+id/post_body_container"
+            android:layout_toRightOf="@id/post_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/mime_photo_thumbnail_size"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingTop="@dimen/normal_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingBottom="@dimen/small_padding" >
+
+        <ImageView
+                android:id="@+id/author_picture"
+                android:layout_width="@dimen/contact_pic_size_small"
+                android:layout_height="@dimen/contact_pic_size_small" />
+
+        <TextView
+                android:id="@+id/timestamp"
+                android:layout_toRightOf="@id/author_picture"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_alignBottom="@id/author_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/default_timestamp"/>
+
+        <TextView
+                android:id="@+id/author_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/timestamp"
+                android:layout_above="@id/timestamp"
+                android:layout_marginBottom="@dimen/xxsmall_margin"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/default_green"
+                android:ellipsize="end"/>
+
+        <com.projectgoth.ui.widget.TextViewEx
+                android:id="@+id/post_text_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/author_picture"
+                android:layout_below="@id/author_picture"
+                android:paddingTop="@dimen/small_padding"
+                android:paddingBottom="@dimen/small_normal_padding"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/default_text"
+                android:maxLines="3"
+                android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+            android:id="@+id/see_more_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_body_container"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white_background"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingBottom="@dimen/small_padding" >
+
+        <TextView
+                android:id="@+id/see_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/default_text"/>
+
+        <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="@dimen/icon_width_xxxsmall"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_height="@dimen/icon_height_xxxsmall"
+                android:src="@drawable/ad_arrowright_grey" />
+
+    </LinearLayout>
+
+</RelativeLayout>

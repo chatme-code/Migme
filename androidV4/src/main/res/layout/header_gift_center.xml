@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="@dimen/icon_width_small"
+        android:layout_height="@dimen/icon_height_small"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/small_padding"
+        android:src="@drawable/ad_arrowleft_green"
+        android:contentDescription="@string/header_gift_center_cd_back_button"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/main_title_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:contentDescription="@string/header_gift_center_cd_icon"
+            android:layout_width="@dimen/icon_width_xsmall"
+            android:layout_height="@dimen/icon_height_xsmall"
+            android:padding="@dimen/small_padding" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_xxlarge" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/step_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_title_container"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/default_text"
+        android:textSize="@dimen/text_size_large" />
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="@dimen/icon_width_xsmall"
+        android:layout_height="@dimen/icon_height_xsmall"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/small_padding"
+        android:contentDescription="@string/header_gift_center_cd_close_button"
+        android:src="@drawable/ad_close" />
+
+</RelativeLayout>

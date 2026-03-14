@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sticker_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/xsmall_padding"
+    android:paddingRight="@dimen/xsmall_padding" >
+
+    <ImageView
+        android:id="@+id/item"
+        android:layout_width="@dimen/sticker_thumb_width"
+        android:layout_height="@dimen/sticker_thumb_height"
+        android:contentDescription="@string/holder_item_sticker_cd_item"
+        android:scaleType="centerInside" />
+
+</RelativeLayout>

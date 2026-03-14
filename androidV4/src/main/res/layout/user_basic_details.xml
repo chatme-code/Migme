@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:migme="http://schemas.android.com/apk/res/com.projectgoth"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <com.projectgoth.ui.widget.UserImageView
+        android:id="@+id/user_image"
+        android:layout_width="@dimen/contact_pic_size_small"
+        android:layout_height="@dimen/contact_pic_size_small"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_default_avatar"
+        android:visibility="gone" />
+
+    <com.projectgoth.ui.widget.UsernameWithLabelsView
+        android:id="@+id/username_with_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_weight="1"
+        migme:labelSize="@dimen/miglevel_size"
+        migme:textSize="@dimen/text_size_xlarge" />
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="@dimen/cancel_selected_user"
+        android:layout_height="@dimen/cancel_selected_user"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/user_basic_details_cd_close_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/ad_cross_white"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/miglevel_icon"
+        android:layout_width="@dimen/miglevel_size"
+        android:layout_height="@dimen/miglevel_size"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/xsmall_margin"
+        android:contentDescription="@string/user_basic_details_cd_miglevel_icon"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/miglevel_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:textColor="@color/default_timestamp"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" >
+    </TextView>
+
+</merge>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/normal_padding"
+    android:background="@color/black_half_transparent" >
+
+    <RelativeLayout  
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/normal_padding"
+        android:paddingBottom="@dimen/small_padding"
+        android:background="@drawable/share_box_background">  
+        <LinearLayout
+            android:id="@+id/title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadowbg"
+            android:gravity="center"> 
+	        <TextView
+	            android:id="@+id/txt_title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/dark_gray_text"
+	            android:layout_margin="@dimen/normal_margin"
+	            android:textSize="@dimen/text_size_xxxlarge"
+	            android:drawablePadding="@dimen/large_padding"
+	            android:gravity="center" />
+        </LinearLayout>
+            
+        <TextView
+            android:id="@+id/browser_btn_signup"
+            style="@style/LoginButton"
+            android:layout_below="@+id/title_container"
+            android:background="@color/orange"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+            
+        <WebView
+            android:id="@+id/webview"
+            android:layout_below="@+id/browser_btn_signup"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadeScrollbars="true"
+            android:focusable="true"
+            android:contentDescription="@string/fragment_browser_dialog_cd_webview"
+            android:focusableInTouchMode="true" />
+
+        <com.projectgoth.ui.widget.GifImageView
+            android:id="@+id/progress"
+            android:layout_width="@dimen/icon_width_large"
+            android:layout_height="@dimen/icon_height_large"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="@dimen/icon_width_xsmall"
+            android:layout_height="@dimen/icon_height_xsmall"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/normal_margin"
+            android:contentDescription="@string/fragment_browser_dialog_cd_btn_close"
+            android:src="@drawable/ad_close_white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

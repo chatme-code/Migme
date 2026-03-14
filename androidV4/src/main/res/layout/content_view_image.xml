@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.projectgoth.ui.widget.ImageViewEx xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/content_view"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center_vertical"
+     android:padding="@dimen/small_padding"
+     android:layout_margin="@dimen/small_margin"
+     android:contentDescription="@string/content_view_image_cd_content_view"
+     android:scaleType="fitCenter" />

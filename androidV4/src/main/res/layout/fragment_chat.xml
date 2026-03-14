@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.projectgoth.ui.widget.SlidingPanelContainer xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:migme="http://schemas.android.com/apk/res/com.projectgoth"
+    android:id="@+id/background_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+            android:id="@+id/left_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/xxlarge_margin"
+            migme:layout_panelLocation="left"/>
+
+    <FrameLayout
+            android:id="@+id/right_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/xxlarge_margin"
+            migme:layout_panelLocation="right"/>
+
+    <RelativeLayout
+            android:id="@+id/center_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <com.projectgoth.ui.widget.LinearLayoutEx
+            android:id="@+id/chat_fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <com.projectgoth.ui.widget.ObservableListView
+                android:id="@+id/chat_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0"
+                android:background="@color/gray_background"
+                android:cacheColorHint="@color/gray_background"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:fadeScrollbars="true"
+                android:fadingEdge="none"
+                android:transcriptMode="normal"/>
+
+            <fragment
+                android:name="com.projectgoth.ui.widget.MessageInputPanel"
+                android:id="@+id/chat_input_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.projectgoth.ui.widget.LinearLayoutEx>
+
+        <com.projectgoth.ui.widget.tooltip.ToolTipRelativeLayout
+            android:id="@+id/activity_main_tooltipframelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.wunderlist.slidinglayer.SlidingLayer
+            android:id="@+id/slidingLayer1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chat_pin_total_height"
+            android:clickable="true" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:clickable="true" >
+
+                <!--contain holder-->
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/chat_pin_body_height"
+                    android:id="@+id/pin_content_container"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/chat_pin_body_padding"
+                    android:paddingRight="@dimen/chat_pin_body_padding">
+                    android:gravity="center_horizontal">
+                 </LinearLayout>
+
+                <!--deezer_playback-->
+                <include
+                    android:id="@+id/deezer_playback_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/chat_pin_body_height"
+                    layout="@layout/deezer_playback_chat" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/chat_pin_hidden_tab_area_height"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/hidden_pin_tab"
+                        android:layout_width="@dimen/chat_pin_hidden_tab_width"
+                        android:layout_height="@dimen/chat_pin_hidden_tab_height"
+                        android:src="@drawable/hidden_pin_tab"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.wunderlist.slidinglayer.SlidingLayer>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mentions_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_corner"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_padding"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/mentions_list_filter"
+            style="@style/Form.TextField.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_textbox"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:contentDescription="@string/fragment_chat_cd_mentions_list_filter"
+            android:singleLine="true" />
+
+        <ListView
+            android:id="@+id/mentions_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</com.projectgoth.ui.widget.SlidingPanelContainer>

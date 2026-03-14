@@ -1,0 +1,68 @@
+BOT_ADDED	BOT_NAME added to the chat.
+PLAY_NOW	Enter COMMAND_START to start a game of GAME. Minimum CURRENCY DEFAULT_POT_START. For custom entry, COMMAND_START <entry_amount>.
+GAME_STARTING_STARTER	PLAYER added to game. Charges apply. CURRENCY AMOUNT. Create/enter pot. COMMAND_CANCEL to cancel. TIME seconds.
+GAME_STARTING_IMMEDIATE	PLAYER added to game. Charges apply. CURRENCY AMOUNT. Create/enter pot.
+GAME_STARTING_USER_JOINED	GAME Game starting soon.
+JOIN_NOW	SEQUENCE_EMOTE PLAYER started a game with CURRENCY AMOUNT. COMMAND_JOIN to join. Minimum CURRENCY DEFAULT_POT_ENTRY. For custom entry, COMMAND_JOIN <entry_amount>. TIME seconds.
+JOIN_REMINDER_FEVER	You are currently in Fever Mode. If you join this game you get bonuses to your Hit Points.
+JOIN_REMINDER_BERSERK	You are currently in Berserk Mode. If you join this game you get bonuses to your attack.
+WAITING_FOR_PLAYERS	Waiting for more players. Enter COMMAND_JOIN to join the game.
+PLAYER_JOINED	SEQUENCE_EMOTE PLAYER joined the game with CURRENCY AMOUNT.
+MAX_PLAYER_JOINED	NUM players joined. Game is now full.
+CANCEL_GAME	PLAYER: Game has been cancelled. You are not charged.
+JOINING_END	Joining ends. Not enough players. Need NUM. Enter COMMAND_START to start a new game.
+PLAYER_HITPOINT	SEQUENCE_EMOTE PLAYER: [HITPOINT HP] MODE_MSG
+PLAYER_HITPOINT_DEAD	SEQUENCE_EMOTE PLAYER: LOSER_EMOTE MODE_MSG
+PREPARING_TO_FIGHT_1	Preparing to fight. Calculating Hit Points...
+PREPARING_TO_FIGHT_2	Tabulating migFriends for each player...
+PREPARING_TO_FIGHT_3	Comparing migLevels...
+PREPARING_TO_FIGHT_4	Calculating Hit Points...
+BATTLE_STARTING	Fight starting in TIME seconds...
+BATTLE_BEGIN_HELP	Send COMMAND_ATTACK<Player#> to attack other players. COMMAND_HP_CHECK to check HP.
+BATTLE_BEGIN	Game begins - Last player standing wins!
+ROUND_STARTING	ROUND #ROUND_NUM starting in TIME seconds.
+ROUND_STARTED	ROUND #ROUND_NUM: Players, time to fight. COMMAND_ATTACK to ATTACK! TIME seconds.
+ROUND_ENDED	TIME'S UP. ROUND #ROUND_NUM Results:
+ATTACK_MESSAGE	PLAYER SEQUENCE_EMOTE ATTACK_EMOTE SEQUENCE2_EMOTE PLAYE2 (DAMAGE_POINT dmg) [HITPOINT HP left]
+ATTACK_SELF	You are number SEQUENCE_EMOTE. You cannot attack yourself.
+MILESTONE_D10	SEQUENCE_EMOTE PLAYER's HP is almost 0!
+MILESTONE_P25	SEQUENCE_EMOTE PLAYER's HP is now below 25%! This could be over soon!
+MILESTONE_P50	SEQUENCE_EMOTE PLAYER's HP is now below 50%! This is getting interesting!
+MILESTONE_P75	SEQUENCE_EMOTE PLAYER's HP is now below 75%! What a great battle so far!
+IDLE_MESSAGE	Don't give up! Send COMMAND_ATTACK to keep attacking! Send COMMAND_HP_CHECK to check HP.
+LOST_MESSAGE	PLAYER SEQUENCE_EMOTE LOSER_EMOTE SEQUENCE2_EMOTE PLAYE2. NUM warriors remain.
+GAME_ENDING_ALERT	Battle ending in TIME sec. Player with highest HP% will win. Keep attacking!
+GAME_TIMEOUT	GAME game over.
+CHAMPION_MESSAGE	SEQUENCE_EMOTE PLAYER is the CHAMPION WINNER_CUP_EMOTE!
+WINNER_MESSAGE	GAME Game over! PLAYER WINS CURRENCY AMOUNT! CONGRATS!
+GAME_PLAYING_DEAD_PLAYER	You are already dead LOSER_EMOTE. Please join the next game.
+ATTACK_DEAD_PLAYER	PLAYER SEQUENCE_EMOTE is already dead LOSER_EMOTE.
+ROUND_ATTACK_EXCEEDED	You already attacked in this round.
+ROUND_IDLE	PLAYES did not attack any player.
+END_GAME_NO_PLAYER	GAME game ended because all players left.
+END_GAME_BERSERK	Your third death in a row: BERSERK MODE activated! You'll do higher damage for your next 3 Warriors games in 1 hour.
+END_GAME_FEVER	Your third win in a row: FEVER MODE activated! You'll get HP bonuses for the next 3 Warriors games in 1 hour.
+END_GAME_BERSERK_2_MORE	BERSERK MODE still active. You'll do higher damage for your next 2 Warriors games.
+END_GAME_BERSERK_1_MORE	BERSERK MODE still active. You'll do higher damage for your next Warriors game.
+END_GAME_BERSERK_0_MORE	Berserk Mode ends.
+END_GAME_FEVER_2_MORE	FEVER MODE still active. You'll get HP bonuses for your next 2 Warriors games.
+END_GAME_FEVER_1_MORE	FEVER MODE still active. You'll get HP bonuses for your next Warriors game.
+END_GAME_FEVER_0_MORE	Fever Mode ends.
+
+BYSTANDER_PLEASE_WAIT	A GAME Game is on! Who do you think will win?
+NEW_GAME_GOING_ON	PLAYER: a game is currently going on. Please wait.
+PLAYER_REJOIN	SEQUENCE_EMOTE PLAYER rejoined the battle.
+PLAYER_LEFT	SEQUENCE_EMOTE PLAYER left the battle.
+GAME_STARTING_NON_PLAYER	GAME Game starting soon.
+GAME_STARTED_NON_PLAYER	A GAME Game is on! Please wait until it's over then use COMMAND_START to start a new game.
+GAME_STARTED_PLAYER	The battle will begin in no time. Get ready!
+GAME_STARTED_PLAYER_REJOIN	Welcome back PLAYER. The battle will begin in no time. Get ready!
+ROUND_STARTED_PLAYER	Round #ROUND_NUM has begun. Send COMMAND_ATTACK to start attacking!
+ROUND_STARTING_PLAYER	Round #ROUND_NUM starting soon. Get ready!
+ROUND_STARTED_PLAYER_REJOIN	Welcome back PLAYER. We are in Round #ROUND_NUM now. Send COMMAND_ATTACK to start attacking!
+ROUND_STARTING_PLAYER_REJOIN	Welcome back PLAYER. Round #ROUND_NUM starting soon. Get ready!
+GAME_JOINING_NON_PLAYER	GAME game started. COMMAND_JOIN to join. Minimum CURRENCY DEFAULT_POT_ENTRY. For custom entry, COMMAND_JOIN <entry_amount>. TIME seconds.
+GAME_JOINING_PLAYER	Still waiting for players. Please wait a while.
+GAME_JOINING_PLAYER_REJOIN	Welcome back PLAYER. Still waiting for players join. Please wait a while.
+INVALID_AMOUNT_LESS	PLAYER: Invalid amount. Custom amount has to be CURRENCY AMOUNT or more.
+INVALID_AMOUNT	PLAYER: Invalid amount 'AMOUNT'. Type COMMAND <custom_amount>

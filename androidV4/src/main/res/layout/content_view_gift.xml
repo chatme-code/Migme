@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/gift_shower_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/large_padding"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/gift_shower_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:src="@drawable/gift_shower_banner"
+                android:contentDescription="@string/content_view_gift_cd_gift_shower_banner"
+                android:scaleType="fitCenter" />
+            
+            <ImageView
+                android:id="@+id/gift_image"
+                android:layout_width="@dimen/emoticon_gridSize_large"
+                android:layout_height="@dimen/emoticon_gridSize_large"
+                android:contentDescription="@string/content_view_gift_cd_gift_image"
+                android:layout_marginBottom="@dimen/medium_margin" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gift_recipient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingLeft="@dimen/large_padding"
+            android:paddingRight="@dimen/large_padding"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/gift_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/xsmall_padding"
+            android:paddingLeft="@dimen/large_padding"
+            android:paddingRight="@dimen/large_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/gift_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/large_padding"
+            android:textSize="@dimen/text_size_medium" />
+</LinearLayout>

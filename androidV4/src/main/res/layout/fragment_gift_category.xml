@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corner"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/gift_category_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/store_category_rounded_corner"
+        android:paddingBottom="@dimen/small_padding" >
+
+        <TextView
+            android:id="@+id/gift_category"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/normal_padding"
+            android:paddingLeft="@dimen/medium_padding"
+            android:paddingTop="@dimen/normal_padding"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/gift_search"
+            android:layout_width="@dimen/icon_width_small"
+            android:layout_height="@dimen/icon_height_small"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/small_margin"
+            android:padding="@dimen/small_padding"
+            android:contentDescription="@string/fragment_gift_category_cd_gift_search"
+            android:src="@drawable/ic_find" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/small_padding"
+        android:paddingTop="@dimen/small_padding"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/spinner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_toLeftOf="@+id/gift_sort_by_spinner"
+            android:paddingRight="@dimen/normal_padding"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="normal" />
+
+        <Spinner
+            android:id="@+id/gift_sort_by_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/gift_sort_order_spinner"
+            android:contentDescription="@string/fragment_gift_category_cd_gift_sort_by_spinner"
+            android:popupBackground="@color/white" />
+
+        <Spinner
+            android:id="@+id/gift_sort_order_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/sort_button"
+            android:contentDescription="@string/fragment_gift_category_cd_gift_sort_order_spinner"
+            android:popupBackground="@color/white" />
+
+        <com.projectgoth.ui.widget.ButtonEx
+            android:id="@+id/sort_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="normal"
+            mig33:type="button_orange" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gift_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:contentDescription="@string/fragment_gift_category_cd_gift_grid"
+        android:verticalSpacing="@dimen/medium_margin" >
+    </GridView>
+
+</LinearLayout>

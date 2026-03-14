@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/normal_padding"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingLeft="@dimen/small_padding"
+        android:paddingRight="@dimen/small_padding" />
+
+    <!-- empty view of recent sticker and gift tab -->
+    <RelativeLayout
+        android:id="@+id/recent_sticker_gift_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/gift_icon"
+            android:layout_width="@dimen/empty_recent_tab_icon_size"
+            android:layout_height="@dimen/empty_recent_tab_icon_size"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ad_chat_sendgift"
+            android:contentDescription="@string/fragment_attachment_paper_cd_gift_icon"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_toRightOf="@id/gift_icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/send_gift_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/text_size_xlarge"
+                android:textColor="@color/chat_input_empty_hint"
+                android:textStyle="normal" 
+                android:gravity="center" />
+            
+            <TextView
+                android:id="@+id/send_more_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/small_margin"
+                android:paddingLeft="@dimen/xsmall_padding"
+                android:paddingRight="@dimen/xsmall_padding"
+                android:textColor="@color/chat_input_empty_hint"
+                android:textSize="@dimen/text_size_medium"
+                android:gravity="center" />            
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background">
+
+    <include
+        android:id="@+id/header_container"
+        layout="@layout/header_new_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.projectgoth.ui.widget.Spinner
+        android:id="@+id/genre_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/contact_pic_size_medium"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/normal_margin"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/channel_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_container"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:background="@color/default_background"
+        android:horizontalSpacing="@dimen/normal_margin"
+        android:numColumns="2"
+        android:verticalSpacing="@dimen/normal_margin" />
+
+    <FrameLayout
+        android:id="@+id/empty_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/channel_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/xlarge_margin"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/deezer_playback"
+        layout="@layout/deezer_playback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

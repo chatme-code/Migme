@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/beige_background"
+        android:paddingBottom="@dimen/large_padding" >
+
+        <RelativeLayout
+            android:id="@+id/main_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/large_margin" >
+
+            <ImageView
+                android:id="@+id/icon_main"
+                android:layout_width="@dimen/icon_width_normal"
+                android:layout_height="@dimen/icon_height_normal"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:contentDescription="@string/fragment_request_follow_cd_icon_main"
+                android:padding="@dimen/small_padding"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/text_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@+id/icon_main" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/default_green"
+                    android:textSize="@dimen/text_size_xlarge"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/default_text"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginRight="@dimen/large_margin"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingBottom="@dimen/normal_padding"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/info_subtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginRight="@dimen/large_margin"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingBottom="@dimen/large_padding"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="normal" />
+
+        <com.projectgoth.ui.widget.ButtonEx
+            android:id="@+id/send_gift_button"
+            style="@style/Button.Default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_subtext"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            mig33:type="button_orange" />
+    </RelativeLayout>
+
+</RelativeLayout>

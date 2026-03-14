@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/expandable_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:childDivider="@null"
+    android:divider="@null"
+    android:dividerHeight="@dimen/list_divider_height"
+    android:drawSelectorOnTop="false"
+    android:fadeScrollbars="true"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:groupIndicator="@null" />

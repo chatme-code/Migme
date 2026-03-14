@@ -1,0 +1,7 @@
+<resources>
+
+    <dimen name="text_size_xxlarge">20sp</dimen>
+    <dimen name="text_size_xxxlarge">22sp</dimen>
+    <dimen name="walkthrough_text_size">20sp</dimen>
+
+</resources>
