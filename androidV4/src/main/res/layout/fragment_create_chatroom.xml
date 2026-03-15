@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_background"
+        android:padding="@dimen/medium_padding"
+        android:paddingTop="@dimen/medium_padding" >
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/light_text_color"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hint"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textColor="@color/light_text_color"
+            android:textSize="@dimen/text_size_large" />
+
+        <EditText
+            android:id="@+id/edit_room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/room_name"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:background="@drawable/light_grey_border"
+            android:contentDescription="@string/fragment_create_chatroom_cd_edit_room_name"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/room_name_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/room_name"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_toRightOf="@id/room_name"
+            android:textColor="@color/create_chatroom_comment_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_room_name"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:textColor="@color/light_text_color"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/description_optional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/description"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_toRightOf="@id/description"
+            android:textColor="@color/create_chatroom_comment_color"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/edit_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:background="@drawable/light_grey_border"
+            android:contentDescription="@string/fragment_create_chatroom_cd_edit_description"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/keywords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_description"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:textColor="@color/light_text_color"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/keywords_optional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/keywords"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_toRightOf="@id/keywords"
+            android:textColor="@color/create_chatroom_comment_color"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/keywords_usage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/keywords"
+            android:layout_marginLeft="@dimen/xsmall_margin"
+            android:layout_toRightOf="@id/keywords_optional"
+            android:textColor="@color/create_chatroom_comment_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <FrameLayout
+            android:id="@+id/keywords_border"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/keywords"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:background="@drawable/light_grey_border" >
+
+            <com.projectgoth.ui.widget.SelectedItemBox
+                android:id="@+id/keywords_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                mig33:horizontalSpace="@dimen/xsmall_margin"
+                mig33:verticalSpace="@dimen/xsmall_margin" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/keywords_border"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:paddingBottom="@dimen/normal_padding"
+            android:paddingTop="@dimen/normal_padding"
+            android:textColor="@color/light_text_color"
+            android:textSize="@dimen/text_size_large" />
+
+        <LinearLayout
+            android:id="@+id/sel_lang_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/keywords_border"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_toRightOf="@id/language"
+            android:background="@drawable/light_grey_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_padding" >
+
+            <TextView
+                android:id="@+id/selected_language"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_large" />
+
+            <ImageView
+                android:layout_width="@dimen/icon_width_xxxsmall"
+                android:layout_height="@dimen/icon_height_xxxsmall"
+                android:src="@drawable/ad_arrowdown_grey" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/allow_kick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/language"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_toLeftOf="@+id/toggle_button"
+            android:textColor="@color/light_text_color"
+            android:textSize="@dimen/text_size_large" />
+
+        <ToggleButton
+            android:id="@+id/toggle_button"
+            android:layout_width="@dimen/toggle_button_width"
+            android:layout_height="@dimen/toggle_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/language"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:background="@drawable/btn_toggle_bg"
+            android:contentDescription="@string/fragment_create_chatroom_cd_toggle_button"
+            android:textOff=""
+            android:textOn="" />
+
+        <com.projectgoth.ui.widget.ButtonEx
+            android:id="@+id/create_chatroom"
+            style="@style/Button.Default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/allow_kick"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:gravity="center"
+            android:padding="@dimen/large_padding"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="normal"
+            mig33:type="button_orange" />
+    </RelativeLayout>
+
+</ScrollView>

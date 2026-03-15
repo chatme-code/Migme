@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/signup_background_green">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/image_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/signup_email_verify_title_phrase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/signup_email_verify_title_phrase_two"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:textColor="@color/white_text_color"
+            android:textSize="@dimen/signup_email_verify_test_size" />
+
+        <TextView
+            android:id="@+id/signup_email_verify_title_phrase_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:textColor="@color/white_text_color"
+            android:textSize="@dimen/signup_email_verify_test_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/signup_image_layout_margin_top"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ImageView
+            android:id="@+id/signup_email_verify_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <ProgressBar
+            android:id="@+id/signup_email_verify_verifying_progressbar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_layout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/signup_email_verify_phrase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:textColor="@color/white_text_color" />
+
+        <TextView
+            android:id="@+id/signup_email_verify_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_email_verify_phrase"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:textColor="@color/white_text_color" />
+
+        <Button
+            android:id="@+id/signup_email_verify_explore_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_email_verify_email"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/signup_explore_button_margin"
+            android:background="@null"
+            android:padding="@dimen/signup_email_verify_padding"
+            android:textColor="@color/white_text_color" />
+
+        <TextView
+            android:id="@+id/signup_email_verify_resend_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_email_verify_explore_button"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:paddingTop="@dimen/signup_email_verify_resend_button_padding_top" />
+    </RelativeLayout>
+</RelativeLayout>

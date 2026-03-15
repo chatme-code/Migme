@@ -1,0 +1,40 @@
+insert into emoticonpack values( 34, 2, 'Halloween IM3', null, 0, null, 20, 1, null, 1, 1 );
+
+insert into emoticon values( 1027, 34, 2, 'h-angry', 12, 12, '/usr/fusion/emoticons/halloween_indosat/H-Angry_12.gif', '/usr/fusion/emoticons/halloween_indosat/H-Angry_12.png' );
+insert into emoticon values( 1028, 34, 2, 'h-angry', 14, 14, '/usr/fusion/emoticons/halloween_indosat/H-Angry_14.gif', '/usr/fusion/emoticons/halloween_indosat/H-Angry_14.png' );
+insert into emoticon values( 1029, 34, 2, 'h-angry', 16, 16, '/usr/fusion/emoticons/halloween_indosat/H-Angry_16.gif', '/usr/fusion/emoticons/halloween_indosat/H-Angry_16.png' );
+insert into emoticon values( 1030, 34, 2, 'h-confuse', 12, 12, '/usr/fusion/emoticons/halloween_indosat/H-Confuse_12.gif', '/usr/fusion/emoticons/halloween_indosat/H-Confuse_12.png' );
+insert into emoticon values( 1031, 34, 2, 'h-confuse', 14, 14, '/usr/fusion/emoticons/halloween_indosat/H-Confuse_14.gif', '/usr/fusion/emoticons/halloween_indosat/H-Confuse_14.png' );
+insert into emoticon values( 1032, 34, 2, 'h-confuse', 16, 16, '/usr/fusion/emoticons/halloween_indosat/H-Confuse_16.gif', '/usr/fusion/emoticons/halloween_indosat/H-Confuse_16.png' );
+insert into emoticon values( 1033, 34, 2, 'h-cry', 12, 12, '/usr/fusion/emoticons/halloween_indosat/H-Cry_12.gif', '/usr/fusion/emoticons/halloween_indosat/H-Cry_12.png' );
+insert into emoticon values( 1034, 34, 2, 'h-cry', 14, 14, '/usr/fusion/emoticons/halloween_indosat/H-Cry_14.gif', '/usr/fusion/emoticons/halloween_indosat/H-Cry_14.png' );
+insert into emoticon values( 1035, 34, 2, 'h-cry', 16, 16, '/usr/fusion/emoticons/halloween_indosat/H-Cry_16.gif', '/usr/fusion/emoticons/halloween_indosat/H-Cry_16.png' );
+insert into emoticon values( 1036, 34, 2, 'h-happy', 12, 12, '/usr/fusion/emoticons/halloween_indosat/H-Happy_12.gif', '/usr/fusion/emoticons/halloween_indosat/H-Happy_12.png' );
+insert into emoticon values( 1037, 34, 2, 'h-happy', 14, 14, '/usr/fusion/emoticons/halloween_indosat/H-Happy_14.gif', '/usr/fusion/emoticons/halloween_indosat/H-Happy_14.png' );
+insert into emoticon values( 1038, 34, 2, 'h-happy', 16, 16, '/usr/fusion/emoticons/halloween_indosat/H-Happy_16.gif', '/usr/fusion/emoticons/halloween_indosat/H-Happy_16.png' );
+insert into emoticon values( 1039, 34, 2, 'h-pirate', 12, 12, '/usr/fusion/emoticons/halloween_indosat/H-Pirate_12.gif', '/usr/fusion/emoticons/halloween_indosat/H-Pirate_12.png' );
+insert into emoticon values( 1040, 34, 2, 'h-pirate', 14, 14, '/usr/fusion/emoticons/halloween_indosat/H-Pirate_14.gif', '/usr/fusion/emoticons/halloween_indosat/H-Pirate_14.png' );
+insert into emoticon values( 1041, 34, 2, 'h-pirate', 16, 16, '/usr/fusion/emoticons/halloween_indosat/H-Pirate_16.gif', '/usr/fusion/emoticons/halloween_indosat/H-Pirate_16.png' );
+insert into emoticon values( 1042, 34, 2, 'h-smoke', 12, 12, '/usr/fusion/emoticons/halloween_indosat/H-Smoke_12.gif', '/usr/fusion/emoticons/halloween_indosat/H-Smoke_12.png' );
+insert into emoticon values( 1043, 34, 2, 'h-smoke', 14, 14, '/usr/fusion/emoticons/halloween_indosat/H-Smoke_14.gif', '/usr/fusion/emoticons/halloween_indosat/H-Smoke_14.png' );
+insert into emoticon values( 1044, 34, 2, 'h-smoke', 16, 16, '/usr/fusion/emoticons/halloween_indosat/H-Smoke_16.gif', '/usr/fusion/emoticons/halloween_indosat/H-Smoke_16.png' );
+
+insert into emoticonhotkey values( 1234, 1027, 1, '(h-angry)' );
+insert into emoticonhotkey values( 1235, 1028, 1, '(h-angry)' );
+insert into emoticonhotkey values( 1236, 1029, 1, '(h-angry)' );
+insert into emoticonhotkey values( 1237, 1030, 1, '(h-confuse)' );
+insert into emoticonhotkey values( 1238, 1031, 1, '(h-confuse)' );
+insert into emoticonhotkey values( 1239, 1032, 1, '(h-confuse)' );
+insert into emoticonhotkey values( 1240, 1033, 1, '(h-cry)' );
+insert into emoticonhotkey values( 1241, 1034, 1, '(h-cry)' );
+insert into emoticonhotkey values( 1242, 1035, 1, '(h-cry)' );
+insert into emoticonhotkey values( 1243, 1036, 1, '(h-happy)' );
+insert into emoticonhotkey values( 1244, 1037, 1, '(h-happy)' );
+insert into emoticonhotkey values( 1245, 1038, 1, '(h-happy)' );
+insert into emoticonhotkey values( 1246, 1039, 1, '(h-pirate)' );
+insert into emoticonhotkey values( 1247, 1040, 1, '(h-pirate)' );
+insert into emoticonhotkey values( 1248, 1041, 1, '(h-pirate)' );
+insert into emoticonhotkey values( 1249, 1042, 1, '(h-smoke)' );
+insert into emoticonhotkey values( 1250, 1043, 1, '(h-smoke)' );
+insert into emoticonhotkey values( 1251, 1044, 1, '(h-smoke)' );
+

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true">
+    <!-- the whole container is clickable so that the click will not hit the view behind the panel -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/msg_input_separator"
+        android:background="@color/light_gray" />
+
+    <com.projectgoth.ui.widget.HeightAdjustableFrameLayout
+        android:id="@+id/chat_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/chat_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:baselineAligned="false" >
+
+            <com.projectgoth.ui.widget.EditTextEx
+                android:id="@+id/textfield_chat"
+                style="@style/Form.TextField.ChatInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:imeOptions="actionSend"
+                android:inputType="textMultiLine"
+                android:maxLines="4"
+                android:nextFocusDown="@+id/button_send"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/icon_emoticon"
+                android:layout_width="@dimen/icon_width_normal"
+                android:layout_height="@dimen/icon_height_chat_button"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/normal_padding"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/msg_input_panel_cd_icon_emoticon"
+                android:visibility="gone"
+                android:src="@drawable/drawable_emoticon" />
+
+            <TextView
+                android:id="@+id/char_count_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:gravity="right"
+                android:paddingRight="@dimen/small_padding"
+                android:textColor="@color/text_light_gray"
+                android:textSize="@dimen/text_size_xxlarge"
+                android:visibility="gone"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </com.projectgoth.ui.widget.HeightAdjustableFrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/msg_input_divider"
+        android:background="@color/msg_input_panel_divider" />
+
+    <LinearLayout
+        android:id="@+id/chat_mime_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/icon_gift"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_chat_button"
+            android:padding="@dimen/normal_padding"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/msg_input_panel_cd_icon_gift"
+            android:src="@drawable/ad_gift_grey" />
+
+        <ImageView
+            android:id="@+id/icon_sticker"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_chat_button"
+            android:padding="@dimen/normal_padding"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/msg_input_panel_cd_icon_sticker"
+            android:src="@drawable/ad_sticker" />
+
+        <ImageView
+            android:id="@+id/icon_camera"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_chat_button"
+            android:padding="@dimen/normal_padding"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/msg_input_panel_cd_icon_camera"
+            android:src="@drawable/ad_camera" />
+
+        <ImageView
+            android:id="@+id/icon_gallery"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_chat_button"
+            android:padding="@dimen/normal_padding"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/msg_input_panel_cd_icon_gallery"
+            android:src="@drawable/ad_gallery_grey" />
+
+        <ImageView
+            android:id="@+id/icon_reply_emoticon"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_chat_button"
+            android:padding="@dimen/normal_padding"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/msg_input_panel_cd_icon_emoticon"
+            android:visibility="gone"
+            android:src="@drawable/drawable_emoticon" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/button_send"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_chat_button"
+            android:padding="@dimen/normal_padding"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/msg_input_panel_cd_button_send"
+            android:src="@drawable/send_button" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/attachment_drawer_height"
+            android:background="@color/white"
+            android:visibility="gone" >
+    </FrameLayout>
+
+</LinearLayout>

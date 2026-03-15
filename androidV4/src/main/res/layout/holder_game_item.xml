@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingTop="@dimen/normal_padding" >
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/contact_pic_size_medium"
+            android:layout_height="@dimen/contact_pic_size_medium"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_default_avatar" />
+
+        <TextView
+                android:id="@+id/IM_chat_icon"
+                android:layout_width="@dimen/contact_pic_size_medium"
+                android:layout_height="@dimen/contact_pic_size_medium"
+                android:layout_alignLeft="@id/thumbnail"
+                android:layout_alignBottom="@id/thumbnail"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xxxlarge"
+                android:background="@drawable/solid_circle" />
+
+
+        <RelativeLayout
+                android:id="@+id/text_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:layout_marginRight="@dimen/normal_padding"
+                android:layout_toRightOf="@id/thumbnail" >
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/game_title"
+                    android:textSize="@dimen/text_size_xlarge"
+                    />
+
+            <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:maxLines="3"
+                    android:fontFamily="sans-serif-light"
+            		android:textColor="@color/dark_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    />
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+    <!--
+     the expandable list has different category divider and child item divider, the default attribute of Expandable list 
+    can not implement that properly, so the divider is added here
+    -->
+
+    <View
+        android:id="@+id/category_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/expandable_list_item_divider_height"
+        android:alpha="0.5"
+        android:background="@color/game_divider_color" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:paddingTop="@dimen/normal_padding"
+             android:paddingBottom="@dimen/small_padding">
+
+    <ImageView
+            android:id="@+id/loading_icon"
+            android:layout_width="@dimen/icon_width_xsmall"
+            android:layout_height="@dimen/icon_height_xsmall"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:contentDescription="@string/empty_view_loading_cd_loading_icon"
+            android:src="@drawable/ad_loadstaticchat_grey" />
+
+</FrameLayout>

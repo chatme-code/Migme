@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_box_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/normal_margin"
+    android:padding="@dimen/menu_item_padding"
+    android:background="@color/start_chat_search_bg"
+    android:visibility="gone" >
+
+    <ImageView
+        android:id="@+id/search_box_button"
+        android:layout_width="@dimen/icon_width_small"
+        android:layout_height="@dimen/icon_width_small"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/xsmall_margin"
+        android:padding="@dimen/menu_item_padding"
+        android:contentDescription="@string/search_bar_cd_search_box_button"
+        android:src="@drawable/ic_find" />
+
+    <EditText
+        android:id="@+id/search_box"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/search_box_button"
+        android:background="@drawable/start_chat_search_box_bg"
+        android:ellipsize="end"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:paddingTop="@dimen/small_padding"
+        android:paddingBottom="@dimen/small_padding"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_xxlarge"
+        android:contentDescription="@string/search_bar_cd_search_box"
+        android:textColor="@color/light_gray_text"
+        />
+
+</RelativeLayout>

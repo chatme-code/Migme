@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/music_playpanel_color">
+
+    <RelativeLayout
+        android:id="@+id/content"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:orientation="horizontal"
+	    android:paddingBottom="@dimen/normal_padding"
+	    android:paddingLeft="@dimen/normal_padding"
+	    android:paddingRight="@dimen/normal_padding"
+	    android:paddingTop="@dimen/normal_padding" >
+	    
+	    <ImageView
+	        android:id="@+id/trackCover"
+	        android:layout_width="@dimen/icon_width_normal"
+	        android:layout_height="@dimen/icon_width_normal"
+	        android:padding="@dimen/xsmall_padding"
+	        android:src="@drawable/ic_default_cover_loading" />
+
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/trackCover"
+	        android:orientation="vertical"
+	        android:paddingLeft="@dimen/small_padding"
+	        android:paddingRight="@dimen/small_padding" 
+	       	android:layout_marginRight="@dimen/small_margin"
+	        android:layout_marginLeft="@dimen/normal_margin"
+	        android:layout_toLeftOf="@+id/playbackStop">
+
+	        <TextView
+	            android:id="@+id/trackName"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:maxLines="1"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/text_size_large" />
+
+	        <TextView
+	            android:id="@+id/artistName"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:maxLines="1"
+	            android:textColor="@color/light_text_color"
+	            android:textSize="@dimen/text_size_small" />
+	    </LinearLayout>
+
+	    <ImageButton
+	        android:id="@+id/playbackStop"
+	        android:layout_toLeftOf="@+id/playbackPlayPause"
+            style="@style/DeezerPlayback.Button"
+	        android:src="@drawable/ic_action_stop_white" />
+
+	    <ImageButton
+	        android:id="@+id/playbackPlayPause"
+	        android:layout_alignTop="@+id/playbackStop"
+	        android:layout_toLeftOf="@+id/playbackNext"
+	        style="@style/DeezerPlayback.Button"
+	        android:src="@drawable/ic_action_play_green" />
+
+	    <ImageButton
+	        android:id="@+id/playbackNext"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:background="@android:color/transparent"
+	        android:padding="@dimen/small_normal_padding"
+	        android:scaleType="fitCenter"
+	        android:layout_alignTop="@id/playbackPlayPause"
+            style="@style/DeezerPlayback.Button"
+	        android:src="@drawable/ic_action_forward_white" />
+	</RelativeLayout>
+	
+</RelativeLayout>

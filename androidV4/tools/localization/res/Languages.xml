@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+	<!-- List of language IDs that will get generated -->
+	<lang id="en-US" />
+	<lang id="id-ID" />
+	<lang id="hi-HI" />
+	<lang id="ne-NE" />
+</languages>

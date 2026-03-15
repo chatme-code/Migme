@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- this is a background drawable with two layer, in this way we have one less layer of layout.
+      Cannot use the default api of setting divider because we have different divider of group view
+      and child view -->
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/expandable_list_item_divider_color" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/expandable_list_item_divider_height">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/friend_selected_bg" />
+            <!-- The padding for the content within this drawable. (Does not pad graphics in any way.) -->
+            <padding
+                android:bottom="@dimen/normal_padding"
+                android:top="@dimen/expandable_list_item_padding_bottom">
+            </padding>
+        </shape>
+    </item>
+
+</layer-list>

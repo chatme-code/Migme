@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Holder of mention for an AutoCompleteTextView -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/small_padding">
+    <ImageView
+        android:id="@+id/displaypicture"
+        android:layout_width="@dimen/icon_width_normal"
+        android:layout_height="@dimen/icon_width_normal"
+		android:contentDescription="@string/holder_mention_cd_display_picture"
+        android:src="@drawable/ic_camera_sharebox" />
+    
+	<TextView 
+	    android:id="@+id/username"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="center_vertical"
+	    android:paddingLeft="@dimen/small_padding"
+	    android:paddingTop="@dimen/normal_padding"
+	    android:paddingBottom="@dimen/normal_padding"
+	    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+	    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+	    android:textSize="@dimen/text_size_large"    
+	    android:textColor="@color/default_green" />
+</LinearLayout>

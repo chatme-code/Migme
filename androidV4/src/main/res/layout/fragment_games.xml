@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_background"
+ 	android:orientation="vertical" >
+    
+    
+	<ScrollView
+	    android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" 
+	        >
+	        
+		    <com.projectgoth.ui.widget.AutoScrollViewPager
+		        android:id="@+id/view_pager"
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/game_banner_height" 
+		         />
+		    
+	        <TextView
+	            android:id="@+id/single_game_text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="@dimen/text_size_large" 
+	            android:background="@color/white"
+	            android:padding="@dimen/normal_padding"
+		        android:layout_marginTop="@dimen/normal_margin"
+		        android:layout_marginLeft="@dimen/normal_margin"
+	        	android:layout_marginRight="@dimen/normal_margin"
+	            android:layout_marginBottom="@dimen/ssmall_margin"
+	            android:text="Single Player" />
+	        
+	        <com.projectgoth.ui.widget.ExpandableHeightListView
+		        android:id="@+id/single_game_list"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="@dimen/normal_margin"
+	        	android:layout_marginRight="@dimen/normal_margin"
+	            android:layout_marginBottom="@dimen/normal_margin"
+		        android:cacheColorHint="@color/black"
+		        android:childDivider="@null"
+        		android:divider="@null"
+		        android:drawSelectorOnTop="false"
+		        android:scrollbars="none"
+		        android:focusable="false"
+		        android:focusableInTouchMode="false" />
+	        
+	        <TextView
+	            android:id="@+id/multi_game_text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="@dimen/text_size_large" 
+	            android:background="@color/white"
+	            android:padding="@dimen/normal_padding"
+	            android:layout_marginLeft="@dimen/normal_margin"
+	        	android:layout_marginRight="@dimen/normal_margin"
+	            android:layout_marginBottom="@dimen/ssmall_margin"
+	            android:text="Multi-player" />
+	        
+	        <com.projectgoth.ui.widget.ExpandableHeightListView
+		        android:id="@+id/multi_game_list"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="@dimen/normal_margin"
+	        	android:layout_marginRight="@dimen/normal_margin"
+	            android:layout_marginBottom="@dimen/normal_margin"
+		        android:cacheColorHint="@color/black"
+		        android:childDivider="@null"
+        		android:divider="@null"
+		        android:drawSelectorOnTop="false"
+		        android:scrollbars="none"
+		        android:focusable="false"
+		        android:focusableInTouchMode="false" />
+	        
+	        <RelativeLayout
+		        android:id="@+id/chatroom_layout"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="@dimen/normal_margin"
+	        	android:layout_marginRight="@dimen/normal_margin"
+	            android:layout_marginBottom="@dimen/normal_margin"
+	            android:background="@color/white"
+		        android:padding="@dimen/normal_padding" >
+		
+		        <TextView
+		            android:id="@+id/chatroom_game"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:textSize="@dimen/text_size_large" 
+		            android:text="Chat room games" />
+		
+		        <ImageView
+		            android:id="@+id/arrow_right"
+		            style="@style/ActionBarButton"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/ad_arrowright_grey" />
+		    </RelativeLayout>
+	        
+	    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

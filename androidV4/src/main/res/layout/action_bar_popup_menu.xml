@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <!--
+    to wrap this scroll view with FrameLayout otherwise the scrolling doesn't work
+    on small screen phone with low version os, it is a known issue
+    -->
+
+    <ScrollView
+        android:id="@+id/menu_scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:id="@+id/menu_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black_half_transparent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

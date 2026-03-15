@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/black"
+        android:contentDescription="@string/fragment_store_filter_cd_list_view"
+        android:divider="@color/gray_background"
+        android:dividerHeight="@dimen/list_divider_height"
+        android:drawSelectorOnTop="false"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</LinearLayout>

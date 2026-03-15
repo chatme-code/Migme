@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="@dimen/small_padding"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/small_margin"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/white_text_color" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="@dimen/cancel_selected_user"
+        android:layout_height="@dimen/cancel_selected_user"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ad_cross_white"
+        android:contentDescription="@string/selected_user_label_cd_cancel"
+        android:scaleType="fitXY"/>
+
+</merge>

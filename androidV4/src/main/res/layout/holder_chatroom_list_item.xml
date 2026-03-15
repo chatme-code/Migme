@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/chatroom_item_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/chatroom_list_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/normal_padding" >
+
+        <TextView
+            android:id="@+id/mark"
+            android:layout_width="@dimen/chatroom_icon_size"
+            android:layout_height="@dimen/chatroom_icon_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/childview_margin"
+            android:background="@drawable/solid_circle"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xxxlarge" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/mark"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/normal_margin"
+            android:layout_toRightOf="@+id/mark"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/default_green"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/title"
+            android:layout_below="@id/title"
+            android:layout_marginRight="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:textColor="@color/default_timestamp"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <!--
+    the chatroom list has different category divider and child item divider, the default attribute of Expandable list 
+    can not implement that properly, so the divider is added here
+    -->
+
+    <View
+        android:id="@+id/category_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/expandable_list_item_divider_height"
+        android:background="@color/expandable_list_item_divider_color" />
+
+</LinearLayout>

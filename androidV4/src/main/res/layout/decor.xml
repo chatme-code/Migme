@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Adapted from http://stackoverflow.com/questions/23294954/android-navigation-drawer-on-top-actionbar -->
+
+<android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!-- The main content view will be added programmatically directly rather than add it in a
+    frameLayout container for saving a layer of layout. we have only navigation drawer here -->
+
+    <fragment android:id="@+id/navigation_drawer"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="start"
+              android:name="com.projectgoth.ui.fragment.NavigationDrawerFragment"
+              tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
+

@@ -1,0 +1,31 @@
+<resources>
+
+    <dimen name="text_size_xsmall">9sp</dimen>
+    <dimen name="text_size_small">11sp</dimen>
+    <dimen name="text_size_medium">12sp</dimen>
+    <dimen name="text_size_large">15sp</dimen>
+    <dimen name="text_size_xlarge">16sp</dimen>
+    <dimen name="text_size_xxlarge">18sp</dimen>
+    <dimen name="text_size_xxxlarge">20sp</dimen>
+
+    <dimen name="side_panel_width">288dp</dimen>
+
+    <dimen name="edit_field_height">36dp</dimen>
+    <dimen name="login_banner_text_size">18sp</dimen>
+    <dimen name="login_fields_text_size">16sp</dimen>
+    <dimen name="login_buttons_height">36dp</dimen>
+
+    <dimen name="login_logo_width">75dp</dimen>
+    <dimen name="login_logo_height">43dp</dimen>
+
+    <dimen name="signup_fields_text_size">12sp</dimen>
+    <dimen name="signup_buttons_text_size">10dp</dimen>
+    <dimen name="signup_buttons_height">23dp</dimen>
+
+    <dimen name="button_width_default">64dp</dimen>
+    <dimen name="button_left_right_padding">8dp</dimen>
+    <dimen name="post_padding_leftright">16dp</dimen>
+
+    <dimen name="walkthrough_text_size">20sp</dimen>
+    
+</resources>

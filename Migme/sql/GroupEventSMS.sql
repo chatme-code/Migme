@@ -1,0 +1,1 @@
+ALTER TABLE groupmember ADD COLUMN SMSGroupEventNotification INT(11) NOT NULL DEFAULT 0 AFTER `EventNotification`;

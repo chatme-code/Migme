@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background" >
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="@dimen/icon_width_small"
+        android:layout_height="@dimen/icon_height_small"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/normal_padding"
+        android:contentDescription="@string/fragment_account_balance_cd_close_button"
+        android:src="@drawable/ad_close" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ad_piggy" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <com.projectgoth.ui.widget.ButtonEx
+            android:id="@+id/recharge_button"
+            style="@style/Button.Default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="normal"
+            mig33:type="button_orange" />
+    </LinearLayout>
+
+</RelativeLayout>

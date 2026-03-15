@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:innerRadius="0dp"
+       android:shape="ring"
+       android:thicknessRatio="2"
+       android:useLevel="false" >
+    <solid android:color="@android:color/transparent" />
+
+    <stroke
+        android:width="@dimen/gifts_profile_stroke"
+        android:color="@android:color/white" />
+    <size
+        android:height="@dimen/gifts_profile_image_size"
+        android:width="@dimen/gifts_profile_image_size" />
+</shape>

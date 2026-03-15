@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/large_padding" >
+
+    <com.projectgoth.ui.widget.ButtonEx
+        android:id="@+id/search_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:gravity="center"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingTop="@dimen/normal_padding"
+        android:paddingLeft="@dimen/large_padding"
+        android:paddingRight="@dimen/large_padding"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="normal"
+        mig33:type="button_corp_red" />
+
+</RelativeLayout>

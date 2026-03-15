@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Google Places Attribution at the footer of the location list.
+     Visibility set to Gone by default because the "powered by google" 
+     attribution should only be shown if there are items in the list. -->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/icon_height_xlarge"
+    android:src="@drawable/powered_by_google"
+    android:layout_gravity="center"
+    android:paddingTop="@dimen/normal_padding"
+    android:visibility="gone" />    

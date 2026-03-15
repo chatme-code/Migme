@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gift_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/normal_padding">
+
+    <ImageView
+        android:id="@+id/gift_image"
+        android:layout_width="@dimen/emoticon_gridSize"
+        android:layout_height="@dimen/emoticon_gridSize"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:contentDescription="@string/holder_gift_item_cd_gift_image"
+        android:padding="@dimen/xsmall_padding"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/gift_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gift_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:minLines="2"
+        android:textColor="@color/light_text_color"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:id="@+id/gift_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gift_price"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:singleLine="true"
+        android:textColor="@color/dark_text_color"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

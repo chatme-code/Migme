@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_header_height"
+        android:background="@drawable/star_bg">
+
+        <ImageButton
+            android:id="@+id/previousButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/signup_previous_button_padding_left"
+            android:src="@drawable/ad_arrowleft_green" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_xxxlarge" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/connection_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_large"
+        android:visibility="gone"
+        android:gravity="center"
+        android:paddingTop="@dimen/small_padding"
+        android:paddingBottom="@dimen/small_padding"
+        android:layout_below="@id/header_container" />
+
+    <RelativeLayout
+        android:id="@+id/slogan_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/login_bot_layout_height"
+        android:layout_below="@id/connection_status"
+        android:background="@color/logo_background">
+
+        <ImageView
+            android:id="@+id/pick_email_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/xlarge_margin_bot"
+            android:src="@drawable/ad_username_greenbot" />
+
+        <TextView
+            android:id="@+id/pick_email_slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/xlarge_margin_bot_text"
+            android:layout_marginRight="@dimen/xlarge_margin_bot_text_right"
+            android:layout_toRightOf="@id/pick_email_image"
+            android:textColor="@color/white"
+            android:textSize="@dimen/login_text_bot_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/signup_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/slogan_container"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:id="@+id/signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/nextButton"
+                android:background="@null"
+                android:ems="10"
+                android:focusable="true"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/signup_input_text"
+                android:textColorHint="@color/signup_text_light_grey" />
+
+            <ImageButton
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:padding="@dimen/signup_next_button_padding"
+                android:src="@drawable/ad_arrow_next" />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="@dimen/signup_progressbar_height_width"
+                android:layout_height="@dimen/signup_progressbar_height_width"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signup_divider_padding_height"
+            android:layout_marginTop="@dimen/small_margin"
+            android:background="@color/signup_text_light_grey" />
+
+        <TextView
+            android:id="@+id/email_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:textColor="@color/signup_text_light_grey" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+              xmlns:migme="http://schemas.android.com/apk/res/com.projectgoth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_padding"
+        android:background="@color/white">
+
+    <com.projectgoth.ui.widget.UserImageView
+            android:id="@+id/user_image"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_normal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/childview_margin"
+            android:padding="@dimen/small_padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_default_avatar" />
+
+    <com.projectgoth.ui.widget.UsernameWithLabelsView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_gravity="center_vertical"
+            migme:labelSize="@dimen/miglevel_size"
+            migme:textSize="@dimen/text_size_large"
+            android:textStyle="normal" />
+
+</LinearLayout>

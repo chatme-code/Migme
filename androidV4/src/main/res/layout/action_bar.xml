@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/actionbar_bg"
+    android:gravity="center_vertical" >
+
+    <!-- Menu button -->
+    <com.projectgoth.ui.widget.ActionButton
+        android:id="@+id/action_navigation"
+        style="@style/ActionBarButton"
+        android:layout_width="@dimen/action_button_width"
+        android:layout_height="@dimen/action_button_height"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        mig33:selectedSrc="@drawable/ad_menu_green"
+        mig33:src="@drawable/ad_menu_green" />
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/separator"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_toRightOf="@+id/action_navigation"
+        android:background="@color/light_green" />
+
+    <!-- Placeholder to be replaced by a custom action-bar view -->
+    <View
+        android:id="@+id/custom_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/action_search"
+        android:layout_toRightOf="@+id/separator" />
+
+    <!-- Search button -->
+    <com.projectgoth.ui.widget.ActionButton
+        android:id="@+id/action_search"
+        style="@style/ActionBarButton"
+        android:layout_width="@dimen/action_button_width"
+        android:layout_height="@dimen/action_button_height"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toLeftOf="@+id/action_overflow"
+        android:scaleType="fitXY"
+        mig33:selectedSrc="@drawable/ad_search_white"
+        mig33:src="@drawable/ad_search_white" />
+
+    <!-- Overflow/Alerts button -->
+    <com.projectgoth.ui.widget.ActionButton
+        android:id="@+id/action_overflow"
+        style="@style/ActionBarButton"
+        android:layout_width="@dimen/action_button_width"
+        android:layout_height="@dimen/action_button_height"
+        android:layout_alignParentRight="true"
+        mig33:selectedSrc="@drawable/ad_alert_white"
+        mig33:src="@drawable/ad_alert_green" />
+
+    <!-- Popup wedge -->
+    <ImageView
+        android:id="@+id/overflow_marker"
+        android:layout_width="@dimen/overflow_marker_width"
+        android:layout_height="@dimen/overflow_marker_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:src="@drawable/ad_solidarrow_black"
+        android:contentDescription="@string/action_bar_cd_overflow_marker"
+        android:visibility="invisible" />
+
+</RelativeLayout>

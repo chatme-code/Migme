@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/gift_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gift_preview_container"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/gift_recipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <ImageView
+            android:id="@+id/gift_image"
+            android:layout_width="@dimen/emoticon_gridSize_large"
+            android:layout_height="@dimen/emoticon_gridSize_large"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:contentDescription="@string/header_gift_preview_send_cd_gift_image"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:id="@+id/gift_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/gift_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <TextView
+                android:id="@+id/gift_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:minLines="2"
+                android:textSize="@dimen/text_size_xlarge" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gift_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_padding"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/gift_class_icon"
+            android:layout_width="@dimen/icon_width_xxsmall"
+            android:layout_height="@dimen/icon_height_xxsmall"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:contentDescription="@string/header_gift_preview_send_cd_gift_class_icon"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/gift_class_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:textColor="@color/text_light_gray"
+            android:textSize="@dimen/text_size_large" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/gift_msg_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        android:textColor="@color/light_text_color"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <EditText
+        android:id="@+id/gift_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:background="@drawable/border_textbox"
+        android:inputType="text"
+        android:textColor="@color/default_text"
+        android:textColorHint="@color/default_hint"
+        android:contentDescription="@string/header_gift_preview_send_cd_gift_msg"
+        android:textSize="@dimen/text_size_large" />
+
+    <com.projectgoth.ui.widget.ButtonEx
+        android:id="@+id/send_gift"
+        style="@style/Button.Default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/large_margin"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="normal"
+        mig33:type="button_orange" />
+
+</LinearLayout>

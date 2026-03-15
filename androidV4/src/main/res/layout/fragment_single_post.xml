@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.projectgoth.ui.widget.LinearLayoutEx xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:background="@color/gray_background">
+
+        <RelativeLayout
+            android:id="@+id/list_message_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/list_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/dim"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/list_message_container"
+            android:cacheColorHint="@color/black"
+            android:divider="@color/gray_background"
+            android:dividerHeight="@dimen/list_divider_height"
+            android:drawSelectorOnTop="false"
+            android:fadeScrollbars="true"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layoutAnimation="@anim/listview_layoutanimation" />
+
+        <com.projectgoth.ui.widget.BottomBarMenu
+            android:id="@+id/bottom_bar_menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_menu_bar_height"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+        <com.projectgoth.ui.widget.HeaderBar
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_bar_height"
+            android:layout_alignParentTop="true"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/empty_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <com.projectgoth.ui.widget.GifImageView
+            android:id="@+id/progress"
+            android:layout_width="@dimen/icon_width_large"
+            android:layout_height="@dimen/icon_height_large"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/emotional_grid_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emote_grid"
+        android:layout_weight="1"
+        android:background="@color/white_background"
+        android:visibility="gone">
+
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/msg_input_separator"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_padding"
+            android:textColor="@color/default_timestamp"
+            android:textSize="@dimen/text_size_large" />
+
+        <GridView
+            android:id="@+id/emotional_footprints_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:layout_below="@id/title"
+            android:numColumns="6"
+            android:stretchMode="columnWidth" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_panel_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background"
+        android:visibility="gone">
+
+        <fragment
+            android:name="com.projectgoth.ui.widget.MessageInputPanel"
+            android:id="@+id/msg_input_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/repost_message_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/repost_input_panel_height"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/msg_input_separator"
+            android:background="@color/light_gray" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/repost_input_edittext_height">
+
+            <com.projectgoth.ui.widget.EditTextEx
+                android:id="@+id/repost_input_field"
+                style="@style/Form.TextField.ChatInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/char_count_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:paddingRight="@dimen/small_padding"
+                android:textColor="@color/text_light_gray"
+                android:textSize="@dimen/text_size_xxlarge"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/action_buttons_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_large"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/attach_emoticon_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:padding="@dimen/normal_padding"
+                android:contentDescription="@string/fragment_sharebox_cd_emoticon_button"
+                android:src="@drawable/drawable_emoticon" />
+
+            <ImageView
+                android:id="@+id/twitter_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:layout_toLeftOf="@+id/facebook_button"
+                android:contentDescription="@string/fragment_sharebox_cd_twitter_button"
+                android:src="@drawable/ad_twitter_grey"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/facebook_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:layout_toLeftOf="@+id/privacy_button"
+                android:contentDescription="@string/fragment_sharebox_cd_facebook_button"
+                android:src="@drawable/ad_facebook_grey"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/privacy_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:layout_toLeftOf="@+id/post_button"
+                android:contentDescription="@string/fragment_sharebox_cd_privacy_button"
+                android:src="@drawable/ad_public_grey" />
+
+            <ImageView
+                android:id="@+id/ad_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:layout_toLeftOf="@+id/post_button"
+                android:src="@drawable/ad_vmore_grey"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/overflow_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/privacy_button"
+                android:layout_marginRight="@dimen/normal_margin"
+                android:layout_toLeftOf="@+id/post_button"
+                android:contentDescription="@string/fragment_sharebox_cd_overflow_marker"
+                android:scaleType="fitXY"
+                android:src="@drawable/ad_solidarrow_black_invert"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/post_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/fragment_sharebox_cd_post_button"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingBottom="@dimen/normal_padding"
+                android:paddingLeft="@dimen/large_padding"
+                android:paddingRight="@dimen/large_padding"
+                android:paddingTop="@dimen/normal_padding"
+                android:src="@drawable/send_button" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</com.projectgoth.ui.widget.LinearLayoutEx>

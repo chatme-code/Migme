@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+    <VideoView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/video_preview_height"
+            android:layout_gravity="center"/>
+
+    <com.projectgoth.ui.widget.ImageViewEx xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/video_preview_height"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter" />
+
+</FrameLayout>

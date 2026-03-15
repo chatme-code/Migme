@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/chat_message_common"/>
+
+    <TextView
+            android:id="@+id/message_sender"
+            android:layout_below="@id/date_separator"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/chat_message_sender_margin_left"
+            android:paddingTop="@dimen/normal_margin"
+            android:paddingBottom="@dimen/xsmall_padding"
+            android:textSize="@dimen/chat_text_sender_font"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    <ImageView
+            android:id="@+id/message_avatar"
+            android:layout_below="@id/date_separator"
+            android:layout_alignParentLeft="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_width="@dimen/contact_pic_size_chat"
+            android:layout_height="@dimen/contact_pic_size_chat"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginLeft="@dimen/chat_message_avatar_margin"
+            android:contentDescription="@string/chat_message_common_incoming_cd_message_avatar"
+            android:layout_gravity="top" />
+
+</merge>

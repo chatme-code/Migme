@@ -1,0 +1,6 @@
+
+Merge from trunk to development branch after 516acbae9e7f8e1b064d3a0a69b1e6102e9b0b79 release
+e1f4653 [#53681979]: prepare for next development iteration
+8e55783 [#53681979]: prepare release SP_4.00.003
+4b8e27a [#53681979]: merge for version 4.00.003 from development branch up to 516acbae9e7f8e1b064d3a0a69b1e6102e9b0b79
+65ba157 [#53681979]: added list of changes for version 4.00.003 from development branch up to 516acbae9e7f8e1b064d3a0a69b1e6102e9b0b79

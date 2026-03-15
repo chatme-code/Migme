@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.projectgoth.ui.widget.RelativeLayoutEx xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/friend_list_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_alignParentTop="true" >
+    </FrameLayout>
+
+    <com.projectgoth.ui.widget.BottomBarMenu
+        android:id="@+id/bottom_bar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_menu_bar_height"
+        android:layout_alignParentBottom="true"/>
+
+</com.projectgoth.ui.widget.RelativeLayoutEx>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:left="@dimen/post_bg_shadow_width"
+        android:top="@dimen/post_bg_shadow_width">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/post_bg_shadow" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/post_bg_shadow_width"
+        android:right="@dimen/post_bg_shadow_width">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/post_bg_rect_solid" />
+             <!-- The padding for the content within this drawable. (Does not pad graphics in any way.) -->
+        	<padding
+            	android:bottom="@dimen/post_bg_shadow_width"
+            	android:right="@dimen/post_bg_shadow_width">
+        	</padding>
+        </shape>
+    </item>
+
+</layer-list>

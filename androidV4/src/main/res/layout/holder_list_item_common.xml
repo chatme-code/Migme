@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    xmlns:migme="http://schemas.android.com/apk/res/com.projectgoth" >
+
+    <View
+        android:id="@+id/new_marker"
+        android:layout_width="@dimen/side_marker_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/orange"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/icon_overlay"
+        android:layout_width="@dimen/icon_presence_overlay_small"
+        android:layout_height="@dimen/icon_presence_overlay_small"
+        android:layout_alignBottom="@+id/icon_main"
+        android:layout_alignLeft="@+id/icon_main"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:contentDescription="@string/holder_list_item_common_cd_icon_overlay"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/text_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/action_container"
+        android:layout_toRightOf="@+id/icon_main"
+        android:layout_marginLeft="@dimen/small_margin">
+
+        <com.projectgoth.ui.widget.UsernameWithLabelsView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_gravity="center_vertical"
+            migme:labelSize="@dimen/miglevel_size"
+            migme:textSize="@dimen/text_size_large"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/small_margin" >
+
+        <com.projectgoth.ui.widget.ButtonEx
+            android:id="@+id/option_button"
+            style="@style/Button.IconOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/normal_padding"
+            android:visibility="gone"
+            mig33:icon="@drawable/ad_addfan_white"
+            mig33:type="button_orange" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="@dimen/icon_width_xsmall"
+            android:layout_height="@dimen/icon_height_xsmall"
+            android:background="@drawable/checkbox_border_state"
+            android:button="@null"
+            android:checked="false"
+            android:contentDescription="@string/holder_list_item_common_cd_checkbox"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</merge>

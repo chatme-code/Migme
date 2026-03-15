@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This banner is temporarily shown when there is an interstitial alert -->
+<!--  The banner covers the entire screen to prevent errant interactions -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/interstitial_banner"
+    style="@style/AlertPopupScreenCover">
+
+    <!-- The entire container for the interstitial banner -->
+    <RelativeLayout
+        android:id="@+id/interstitial_banner_container"
+        style="@style/AlertPopupContainer.Interstitial" >
+
+        <!-- An announcement image in the title -->
+        <ImageView
+            android:id="@+id/interstitial_banner_title_image"
+            android:src="@drawable/icon_application"
+            android:layout_width="@dimen/interstitial_banner_title_image_width"
+            android:layout_height="@dimen/interstitial_banner_title_image_height"
+            android:layout_margin="@dimen/normal_margin"
+            android:contentDescription="@string/fragment_interstitial_banner_cd_interstitial_banner_title_image"
+            android:gravity="center" />
+        <!-- Title text -->
+        <TextView
+            android:id="@+id/interstitial_banner_title"
+            style="@style/AlertPopupText.Title.Interstitial"
+            android:layout_toRightOf="@+id/interstitial_banner_title_image" />
+        <TextView
+            android:id="@+id/interstitial_banner_content_desc"
+            style="@style/AlertPopupText.Desc.Interstitial"
+            android:layout_below="@+id/interstitial_banner_title" />
+
+        <ImageButton
+            android:id="@+id/btn_close_interstitial_banner"
+            android:contentDescription="@string/fragment_interstitial_banner_cd_btn_close_interstitial_banner"
+            style="@style/AlertPopupCloseButton" />
+    </RelativeLayout>
+
+</RelativeLayout>

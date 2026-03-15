@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/container"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_width_normal"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/large_padding"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/holder_participant_list_category_cd_category_icon"
+            android:src="@drawable/ad_user_grey"/>
+
+        <TextView
+            android:id="@+id/participant_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/normal_margin"
+            android:textColor="@color/light_text_color"
+            android:textSize="@dimen/text_size_xlarge" />
+    </LinearLayout>
+
+    <View
+            android:id="@+id/category_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/expandable_list_group_divider_height"
+            android:background="@color/expandable_list_group_divider_color" />
+
+</LinearLayout>

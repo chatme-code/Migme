@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center" >
+
+    <com.projectgoth.ui.widget.ButtonEx
+        android:id="@+id/follow"
+        style="@style/Button.Default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/follow_pending"
+        android:layout_width="@dimen/button_width_default"
+        android:layout_height="@dimen/button_height_normal"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="normal"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleInverse"
+        android:layout_width="@dimen/progress_bar_small"
+        android:layout_height="@dimen/progress_bar_small"
+        android:layout_alignLeft="@+id/follow"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/xsmall_padding"
+        android:progressDrawable="@drawable/progressbar_large" />
+
+</RelativeLayout>

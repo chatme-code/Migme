@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:migme="http://schemas.android.com/apk/res/com.projectgoth"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/normal_margin"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/contact_pic_size_chat"
+            android:layout_height="@dimen/contact_pic_size_chat"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:textColor="@color/default_green"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="normal" />
+
+        <com.projectgoth.ui.widget.UsernameWithLabelsView
+            android:id="@+id/labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/small_margin"
+            migme:labelSize="@dimen/miglevel_size"
+            migme:textSize="@dimen/text_size_xlarge" />
+
+        <TextView
+            android:id="@+id/sent_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/sent_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="right"
+            android:textColor="@color/light_text_color"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin">
+
+        <ImageView
+            android:id="@+id/gift_image"
+            android:layout_width="@dimen/gift_icon_size"
+            android:layout_height="@dimen/gift_icon_size"
+            android:contentDescription="@string/fragment_gift_cd_gift_image" />
+
+        <ImageView
+            android:id="@+id/gift_label"
+            android:layout_width="@dimen/label_size"
+            android:layout_height="@dimen/label_size"
+            android:layout_gravity="top"
+            android:contentDescription="@string/fragment_gift_cd_label_premium"
+            android:scaleType="fitXY"
+            android:src="@drawable/ab_store_pgift"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/message_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/gift_icon_padding"
+        android:paddingRight="@dimen/gift_icon_padding">
+
+        <ImageView
+            android:id="@+id/message_icon"
+            android:layout_width="@dimen/label_size"
+            android:layout_height="@dimen/label_size"
+            android:contentDescription="@string/fragment_gift_cd_message"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ad_speechbubble_grey" />
+
+        <TextView
+            android:id="@+id/sent_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:maxLines="2"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/icon_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/large_margin"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/gift_card_padding"
+        android:paddingRight="@dimen/gift_card_padding"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/favorite_icon"
+            android:layout_width="@dimen/button_height_small"
+            android:layout_height="@dimen/button_height_small"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ad_favourite_grey" />
+
+        <ImageView
+            android:id="@+id/share_icon"
+            android:layout_width="@dimen/button_height_small"
+            android:layout_height="@dimen/button_height_small"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ad_share_dark_grey" />
+
+        <ImageView
+            android:id="@+id/giftback_icon"
+            android:layout_width="@dimen/button_height_small"
+            android:layout_height="@dimen/button_height_small"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ad_giftback_grey" />
+    </LinearLayout>
+
+</LinearLayout>

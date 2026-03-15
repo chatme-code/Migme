@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footprint_item_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingLeft="@dimen/small_padding"
+    android:paddingRight="@dimen/small_padding" >
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/contact_pic_size_small"
+        android:layout_height="@dimen/contact_pic_size_small"
+        android:contentDescription="@string/emotional_footprint_item_cd_avatar"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/tag"
+        android:layout_width="@dimen/emotional_footprint_size"
+        android:layout_height="@dimen/emotional_footprint_size"
+        android:contentDescription="@string/emotional_footprint_item_cd_tag"
+        android:layout_alignRight="@id/avatar"
+        android:layout_alignBottom="@id/avatar" />
+
+</RelativeLayout>

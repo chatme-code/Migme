@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <ImageView
+            android:id="@+id/pager_tab_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/small_padding"
+            android:contentDescription="@string/image_paper_tab_cd_paper_tab_image"
+            android:scaleType="center" />
+
+    <TextView
+            android:id="@+id/pager_tab_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/pager_tab_image"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/notification_counter"
+        android:layout_width="@dimen/notification_counter_width"
+        android:layout_height="@dimen/notification_counter_height"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_toLeftOf="@+id/pager_tab_image"
+        android:background="@drawable/ad_counter_red"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="normal"
+        android:visibility="gone" />
+
+</merge>

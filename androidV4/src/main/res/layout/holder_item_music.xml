@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/music_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="@dimen/xsmall_margin"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/game_title"
+        android:textSize="@dimen/text_size_normal" />
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/music_grid_pic_size"
+        android:layout_height="@dimen/music_grid_pic_size"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/normal_padding"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/icon_width_xxxsmall"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/thumbnail"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:padding="@dimen/xsmall_padding"
+        android:scaleType="fitEnd"
+        android:src="@drawable/ad_deezer" />
+
+</RelativeLayout>

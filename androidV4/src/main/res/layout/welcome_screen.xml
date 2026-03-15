@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_sea_green" >
+    
+    <FrameLayout
+        android:id="@+id/FlashBarLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/indicator"
+        android:layout_gravity="center">
+        
+        <android.support.v4.view.ViewPager
+	        android:id="@+id/pager"
+	        android:layout_width="match_parent"
+	        android:layout_margin="@dimen/xsmall_margin"
+	        android:layout_height="match_parent"
+	        />
+        
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_width_normal"
+            android:layout_gravity="right"
+            android:padding="@dimen/medium_padding"
+            android:contentDescription="@string/welcome_screen_cd_close_button"
+            android:src="@drawable/ic_cancel" />
+        
+    </FrameLayout>
+    
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:padding="@dimen/large_padding"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

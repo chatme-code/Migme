@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/friend_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/small_margin"
+        android:background="@drawable/rounded_corner"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_padding"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/friend_list_filter"
+            style="@style/Form.TextField.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_textbox"
+            android:contentDescription="@string/fragment_gift_cd_friend_list_filter"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true" />
+
+        <ListView
+            android:id="@+id/friend_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/fragment_gift_cd_friend_list" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview_container"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textSize="@dimen/text_size_xxlarge" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/title"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/gift_total_cost_padding"
+                android:textColor="@color/gift_balance"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <View
+                android:id="@+id/divider_under_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/send_gift_divider"
+                android:layout_below="@id/title"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:background="@color/send_gift_divider" />
+
+            <com.projectgoth.ui.widget.HorizontalListViewEx
+                android:id="@+id/gift_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_under_title"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:fadeScrollbars="false" />
+
+            <View
+                android:id="@+id/divider_under_gift_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/send_gift_divider"
+                android:layout_below="@id/gift_list"
+                android:background="@color/send_gift_divider" />
+
+            <LinearLayout
+                android:id="@+id/recipient_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_under_gift_list"
+                android:background="@color/recipient_container_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/normal_padding">
+
+                <TextView
+                    android:id="@+id/send_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.projectgoth.ui.widget.HorizontalListViewEx
+                    android:id="@+id/recipient_list_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:fadeScrollbars="false" />
+
+                <EditText
+                    android:id="@+id/gift_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_margin"
+                    android:background="@drawable/border_textbox"
+                    android:contentDescription="@string/fragment_gift_preview_cd_gift_msg"
+                    android:inputType="text"
+                    android:textColor="@color/default_text"
+                    android:textColorHint="@color/default_hint"
+                    android:textSize="@dimen/text_size_large" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_under_gift_msg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/send_gift_divider"
+                android:layout_below="@id/recipient_list_container"
+                android:background="@color/send_gift_divider" />
+
+            <TextView
+                android:id="@+id/total_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/send_gift"
+                android:layout_toLeftOf="@+id/send_gift"
+                android:layout_toStartOf="@id/send_gift"
+                android:padding="@dimen/gift_total_cost_padding" />
+
+            <com.projectgoth.ui.widget.ButtonEx
+                android:id="@+id/send_gift"
+                style="@style/Button.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/divider_under_gift_msg"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_marginRight="@dimen/gift_total_cost_padding"
+                android:layout_marginTop="@dimen/large_margin"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="normal"
+                mig33:type="button_orange" />
+
+            <LinearLayout
+                android:id="@+id/recharge_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/send_gift"
+                android:orientation="vertical"
+                android:padding="@dimen/gift_total_cost_padding"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/send_gift_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gift_balance_red" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/send_gift_hint2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gift_balance_red" />
+
+                    <TextView
+                        android:id="@+id/recharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gift_balance" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

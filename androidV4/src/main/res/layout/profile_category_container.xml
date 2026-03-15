@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_category_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_background" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/normal_margin"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/large_padding"
+            android:textColor="@color/light_gray_text"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/notification_counter"
+            android:layout_width="@dimen/notification_counter_width"
+            android:layout_height="@dimen/notification_counter_height"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/category_name"
+            android:background="@drawable/ad_counter_red"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xsmall"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            style="@style/ActionBarButton"
+            android:layout_width="@dimen/action_button_width"
+            android:layout_height="@dimen/action_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/profile_category_container_cd_arrow_right"
+            android:src="@drawable/ad_arrowright_grey" />
+
+        <View
+            android:id="@+id/drop_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/up_shadow_height"
+            android:layout_below="@+id/category_name"
+            android:background="@drawable/status_container_downshadow" >
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/more_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drop_shadow"
+            android:background="@color/white"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/user_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="@dimen/normal_padding"
+                android:textColor="@color/light_gray_text"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <TextView
+                android:id="@+id/user_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_details"
+                android:padding="@dimen/normal_padding"
+                android:textColor="@color/light_gray_text"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <View
+                android:id="@+id/user_details_shadow"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/up_shadow_height"
+                android:layout_below="@+id/user_status"
+                android:background="@drawable/status_container_downshadow" >
+            </View>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

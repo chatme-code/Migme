@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:migme="http://schemas.android.com/apk/res/com.projectgoth"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:background="@color/mime_post_background"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/mime_photo_thumbnail_size"
+        android:layout_height="@dimen/mime_photo_thumbnail_size"
+        android:padding="@dimen/normal_padding"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:id="@+id/profile_body_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/mime_photo_thumbnail_size"
+        android:layout_toRightOf="@id/avatar"
+        android:background="@color/mime_post_background"
+        android:paddingBottom="@dimen/xsmall_padding" 
+        android:paddingTop="@dimen/small_padding" 
+        android:paddingLeft="@dimen/small_padding" 
+        android:paddingRight="@dimen/small_padding" >
+
+        <com.projectgoth.ui.widget.UsernameWithLabelsView
+            android:id="@+id/name_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/holder_post_list_item_cd_author_details"
+            migme:labelSize="@dimen/miglevel_size"
+            migme:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/mig_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_details"
+            android:layout_alignLeft="@id/name_details"
+            android:layout_marginBottom="@dimen/xsmall_margin"
+            android:textColor="@color/default_timestamp"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/about_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mig_level"
+            android:layout_alignLeft="@id/name_details"
+            android:layout_marginBottom="@dimen/xxsmall_margin"
+            android:ellipsize="end"
+            android:textColor="@color/default_green"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/about_me_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_me"
+            android:layout_alignLeft="@id/name_details"
+            android:layout_marginTop="@dimen/xxsmall_margin"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/see_more_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_body_container"
+        android:background="@color/white_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/small_padding"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:paddingTop="@dimen/small_padding" >
+
+        <TextView
+            android:id="@+id/see_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_text"
+            android:textSize="@dimen/text_size_medium" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/icon_width_xxxsmall"
+            android:layout_height="@dimen/icon_height_xxxsmall"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:src="@drawable/ad_arrowright_grey" />
+    </LinearLayout>
+</RelativeLayout>

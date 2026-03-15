@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/environment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/env_prod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/connection_settings_menu_cd_env_prod"
+            android:text="Production" />
+
+        <RadioButton
+            android:id="@+id/env_staging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/connection_settings_menu_cd_env_staging"
+            android:text="Staging" />
+
+        <RadioButton
+            android:id="@+id/env_qalab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/connection_settings_menu_cd_env_qalab"
+            android:text="QA LAB" />
+
+        <RadioButton
+            android:id="@+id/env_miab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/connection_settings_menu_cd_env_miab"
+            android:text="MIAB" />
+
+        <RadioButton
+            android:id="@+id/env_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/connection_settings_menu_cd_env_custom"
+            android:text="Custom" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/env_custom_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:contentDescription="@string/connection_settings_menu_cd_env_custom_host"
+        android:hint="Host" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/env_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="9"
+        android:hint="Port"
+        android:contentDescription="@string/connection_settings_menu_cd_env_port"
+        android:inputType="number" />
+
+    <CheckBox
+        android:id="@+id/env_use_proxy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/connection_settings_menu_cd_env_use_proxy"
+        android:text="Use proxy" />
+
+    <EditText
+        android:id="@+id/env_proxy_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="9"
+        android:contentDescription="@string/connection_settings_menu_cd_env_proxy_host"
+        android:hint="Proxy host" />
+
+    <EditText
+        android:id="@+id/env_proxy_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Proxy port"
+        android:contentDescription="@string/connection_settings_menu_cd_env_proxy_port"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/version"
+        android:textColor="@color/gray_text"
+        android:layout_margin="@dimen/small_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+</LinearLayout>

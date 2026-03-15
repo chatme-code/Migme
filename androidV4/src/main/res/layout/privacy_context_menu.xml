@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff" >
+    
+    <RadioGroup
+        android:id="@+id/radio_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+ 
+        <RadioButton
+            android:id="@+id/visible_to_public"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public"
+            android:contentDescription="@string/privacy_context_menu_cd_visible_to_public"
+            android:checked="true" />
+ 
+        <RadioButton
+            android:id="@+id/visible_to_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/privacy_context_menu_cd_visible_to_friends"
+            android:text="Friends" />
+        
+        <RadioButton
+            android:id="@+id/visible_to_myself"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/privacy_context_menu_cd_visible_to_myself"
+            android:text="Myself" />
+ 
+    </RadioGroup>
+    
+    <View
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:layout_margin="@dimen/normal_margin"
+	    android:background="@android:color/darker_gray"/>
+
+    <CheckBox
+        android:id="@+id/allow_replies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:contentDescription="@string/privacy_context_menu_cd_allow_replies"
+        android:text="Allow replies" />
+
+</LinearLayout>

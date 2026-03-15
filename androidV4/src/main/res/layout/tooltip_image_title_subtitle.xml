@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="@dimen/normal_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:id="@+id/image1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/medium_margin"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/tooltip_image_title_subtitle_cd_image1"
+                android:layout_gravity="center" />
+
+        <ImageView
+                android:id="@+id/image2"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/medium_margin"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/medium_padding"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:contentDescription="@string/tooltip_image_title_subtitle_cd_image2"
+                android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/title"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+    <TextView
+            android:id="@+id/subtitle"
+            android:textColor="@color/text_light_gray"
+            android:textSize="@dimen/text_size_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/sticker_pack_image"
+        android:layout_width="@dimen/badge_icon_size"
+        android:layout_height="@dimen/badge_icon_size"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/holder_sticker_list_item_cd_sticker_pack_image"
+        android:src="@drawable/ad_loadstaticchat_grey" />
+
+    <RelativeLayout
+        android:id="@+id/text_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/option_button"
+        android:layout_toRightOf="@+id/sticker_pack_image"
+        android:padding="@dimen/normal_padding" >
+
+        <TextView
+            android:id="@+id/sticker_pack_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/dark_text_color"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <TextView
+            android:id="@+id/sticker_pack_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sticker_pack_name"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/light_gray_text"
+            android:textSize="@dimen/text_size_large" />
+    </RelativeLayout>
+
+    <com.projectgoth.ui.widget.ButtonEx
+        android:id="@+id/option_button"
+        style="@style/Button.IconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:gravity="center"
+        android:padding="@dimen/normal_padding"
+        mig33:icon="@drawable/ad_download_white"
+        mig33:type="button_orange" />
+
+    <ImageView
+        android:id="@+id/sticker_pack_ribbon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/small_margin"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/holder_sticker_list_item_cd_sticker_pack_ribbon"
+        android:visibility="gone" />
+
+</RelativeLayout>

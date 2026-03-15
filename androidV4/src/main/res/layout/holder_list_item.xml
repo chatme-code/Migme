@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/list_item_container"
+    android:padding="@dimen/small_padding"
+    android:background="@color/white">
+
+    <ImageView
+            android:id="@+id/icon_main"
+            android:layout_width="@dimen/icon_width_normal"
+            android:layout_height="@dimen/icon_height_normal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/small_padding"
+            android:padding="@dimen/small_padding"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/holder_list_item_cd_icon_main"
+            android:src="@drawable/icon_default_avatar" />
+
+    <include layout="@layout/holder_list_item_common"/>
+
+</RelativeLayout>

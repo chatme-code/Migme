@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This banner is temporarily shown when there is an interstitial alert -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/positive_alert"
+    style="@style/AlertPopupScreenCover">
+
+    <!-- The entire container for the positive alert -->
+    <RelativeLayout
+        android:id="@+id/positivealert_container"
+        android:layout_marginTop="@dimen/xxlarge_margin"
+        style="@style/AlertPopupContainer.PositiveAlert" >
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/medium_margin"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/positivealert_image"
+                android:orientation="vertical">
+            <!-- Title text -->
+            <TextView
+                    android:id="@+id/positivealert_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                   />
+
+            <!-- Message content of the positive alert -->
+            <TextView
+                    android:id="@+id/positivealert_content_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    />
+        </LinearLayout>
+
+
+        <ImageView
+                android:id="@+id/positivealert_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

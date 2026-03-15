@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mig33="http://schemas.android.com/apk/src/com.projectgoth.ui.widget"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/normal_margin"
+        layout="@layout/header_gift_center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_view" >
+
+        <ImageView
+            android:id="@+id/store_button"
+            android:layout_width="@dimen/pagertabstrip_height"
+            android:layout_height="@dimen/pagertabstrip_height"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/fragment_gift_center_cd_store_button"
+            android:padding="@dimen/normal_padding"
+            android:src="@drawable/ad_chatw_storewht" />
+
+        <com.projectgoth.ui.widget.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pagertabstrip_height"
+            android:layout_toLeftOf="@id/store_button"
+            android:textSize="@dimen/text_size_large"
+            app:pstsDividerPadding="@dimen/pagertabstrip_divider_padding"
+            app:pstsShouldExpand="true"
+            app:pstsTextAllCaps="false" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabs" />
+    </RelativeLayout>
+
+</RelativeLayout>

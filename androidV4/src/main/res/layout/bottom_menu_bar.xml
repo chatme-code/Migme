@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bottom_menu_bar_height"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/icon_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/bottom_menu_bar_cd_icon_1"
+            android:padding="@dimen/small_padding"
+            android:scaleType="fitCenter" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_timestamp"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="@dimen/tab_divider_width"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:background="@color/tab_separator" />
+
+    <LinearLayout
+        android:id="@+id/button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/icon_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/bottom_menu_bar_cd_icon_2"
+            android:padding="@dimen/small_padding"
+            android:scaleType="fitCenter" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_timestamp"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="@dimen/tab_divider_width"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:background="@color/tab_separator" />
+
+    <LinearLayout
+        android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/icon_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/bottom_menu_bar_cd_icon_3"
+            android:padding="@dimen/small_padding"
+            android:scaleType="fitCenter" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/text_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_timestamp"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <solid android:color="@color/white" />
+
+    <corners 
+        android:radius="@dimen/cornered_bigger_box_radius"
+        android:bottomRightRadius="@dimen/cornered_bigger_box_radius" android:bottomLeftRadius="@dimen/cornered_bigger_box_radius" 
+        android:topLeftRadius="@dimen/cornered_box_no_radius" android:topRightRadius="@dimen/cornered_box_no_radius" />
+</shape>

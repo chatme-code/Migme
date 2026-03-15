@@ -1,0 +1,53 @@
+insert into emoticonpack (id, type, name, description, price, status, forsale) values( 31, 2, 'Diwali 2009', null, 0.25, 1, 1 );
+
+insert into emoticon values( 979, 31, 2, 'deeya', 12, 12, '/usr/fusion/emoticons/diwali2009/Deeya_12.gif', '/usr/fusion/emoticons/diwali2009/Deeya_12.png' );
+insert into emoticon values( 980, 31, 2, 'deeya', 14, 14, '/usr/fusion/emoticons/diwali2009/Deeya_14.gif', '/usr/fusion/emoticons/diwali2009/Deeya_14.png' );
+insert into emoticon values( 981, 31, 2, 'deeya', 16, 16, '/usr/fusion/emoticons/diwali2009/Deeya_16.gif', '/usr/fusion/emoticons/diwali2009/Deeya_16.png' );
+insert into emoticon values( 982, 31, 2, 'diwalif', 12, 12, '/usr/fusion/emoticons/diwali2009/DiwaliF_12.gif', '/usr/fusion/emoticons/diwali2009/DiwaliF_12.png' );
+insert into emoticon values( 983, 31, 2, 'diwalif', 14, 14, '/usr/fusion/emoticons/diwali2009/DiwaliF_14.gif', '/usr/fusion/emoticons/diwali2009/DiwaliF_14.png' );
+insert into emoticon values( 984, 31, 2, 'diwalif', 16, 16, '/usr/fusion/emoticons/diwali2009/DiwaliF_16.gif', '/usr/fusion/emoticons/diwali2009/DiwaliF_16.png' );
+insert into emoticon values( 985, 31, 2, 'diwalim', 12, 12, '/usr/fusion/emoticons/diwali2009/DiwaliM_12.gif', '/usr/fusion/emoticons/diwali2009/DiwaliM_12.png' );
+insert into emoticon values( 986, 31, 2, 'diwalim', 16, 16, '/usr/fusion/emoticons/diwali2009/DiwaliM_16.gif', '/usr/fusion/emoticons/diwali2009/DiwaliM_16.png' );
+insert into emoticon values( 987, 31, 2, 'haathi', 12, 12, '/usr/fusion/emoticons/diwali2009/Haathi_12.gif', '/usr/fusion/emoticons/diwali2009/Haathi_12.png' );
+insert into emoticon values( 988, 31, 2, 'haathi', 14, 14, '/usr/fusion/emoticons/diwali2009/Haathi_14.gif', '/usr/fusion/emoticons/diwali2009/Haathi_14.png' );
+insert into emoticon values( 989, 31, 2, 'haathi', 16, 16, '/usr/fusion/emoticons/diwali2009/Haathi_16.gif', '/usr/fusion/emoticons/diwali2009/Haathi_16.png' );
+insert into emoticon values( 990, 31, 2, 'mandir', 12, 12, '/usr/fusion/emoticons/diwali2009/Mandir_12.gif', '/usr/fusion/emoticons/diwali2009/Mandir_12.png' );
+insert into emoticon values( 991, 31, 2, 'mandir', 14, 14, '/usr/fusion/emoticons/diwali2009/Mandir_14.gif', '/usr/fusion/emoticons/diwali2009/Mandir_14.png' );
+insert into emoticon values( 992, 31, 2, 'mandir', 16, 16, '/usr/fusion/emoticons/diwali2009/Mandir_16.gif', '/usr/fusion/emoticons/diwali2009/Mandir_16.png' );
+insert into emoticon values( 993, 31, 2, 'mehandi', 12, 12, '/usr/fusion/emoticons/diwali2009/Mehandi_12.gif', '/usr/fusion/emoticons/diwali2009/Mehandi_12.png' );
+insert into emoticon values( 994, 31, 2, 'mehandi', 14, 14, '/usr/fusion/emoticons/diwali2009/Mehandi_14.gif', '/usr/fusion/emoticons/diwali2009/Mehandi_14.png' );
+insert into emoticon values( 995, 31, 2, 'mehandi', 16, 16, '/usr/fusion/emoticons/diwali2009/Mehandi_16.gif', '/usr/fusion/emoticons/diwali2009/Mehandi_16.png' );
+insert into emoticon values( 996, 31, 2, 'muruku', 12, 12, '/usr/fusion/emoticons/diwali2009/Muruku_12.gif', '/usr/fusion/emoticons/diwali2009/Muruku_12.png' );
+insert into emoticon values( 997, 31, 2, 'muruku', 14, 14, '/usr/fusion/emoticons/diwali2009/Muruku_14.gif', '/usr/fusion/emoticons/diwali2009/Muruku_14.png' );
+insert into emoticon values( 998, 31, 2, 'muruku', 16, 16, '/usr/fusion/emoticons/diwali2009/Muruku_16.gif', '/usr/fusion/emoticons/diwali2009/Muruku_16.png' );
+insert into emoticon values( 999, 31, 2, 'swastika', 12, 12, '/usr/fusion/emoticons/diwali2009/Swastika_12.gif', '/usr/fusion/emoticons/diwali2009/Swastika_12.png' );
+insert into emoticon values( 1000, 31, 2, 'swastika', 14, 14, '/usr/fusion/emoticons/diwali2009/Swastika_14.gif', '/usr/fusion/emoticons/diwali2009/Swastika_14.png' );
+insert into emoticon values( 1001, 31, 2, 'swastika', 16, 16, '/usr/fusion/emoticons/diwali2009/Swastika_16.gif', '/usr/fusion/emoticons/diwali2009/Swastika_16.png' );
+
+insert into emoticonhotkey values( 1186, 979, 1, '(deeya)' );
+insert into emoticonhotkey values( 1187, 980, 1, '(deeya)' );
+insert into emoticonhotkey values( 1188, 981, 1, '(deeya)' );
+insert into emoticonhotkey values( 1189, 982, 1, '(diwalif)' );
+insert into emoticonhotkey values( 1190, 983, 1, '(diwalif)' );
+insert into emoticonhotkey values( 1191, 984, 1, '(diwalif)' );
+insert into emoticonhotkey values( 1192, 985, 1, '(diwalim)' );
+insert into emoticonhotkey values( 1193, 986, 1, '(diwalim)' );
+insert into emoticonhotkey values( 1194, 987, 1, '(haathi)' );
+insert into emoticonhotkey values( 1195, 988, 1, '(haathi)' );
+insert into emoticonhotkey values( 1196, 989, 1, '(haathi)' );
+insert into emoticonhotkey values( 1197, 990, 1, '(mandir)' );
+insert into emoticonhotkey values( 1198, 991, 1, '(mandir)' );
+insert into emoticonhotkey values( 1199, 992, 1, '(mandir)' );
+insert into emoticonhotkey values( 1200, 993, 1, '(mehandi)' );
+insert into emoticonhotkey values( 1201, 994, 1, '(mehandi)' );
+insert into emoticonhotkey values( 1202, 995, 1, '(mehandi)' );
+insert into emoticonhotkey values( 1203, 996, 1, '(muruku)' );
+insert into emoticonhotkey values( 1204, 997, 1, '(muruku)' );
+insert into emoticonhotkey values( 1205, 998, 1, '(muruku)' );
+insert into emoticonhotkey values( 1206, 999, 1, '(swastika)' );
+insert into emoticonhotkey values( 1207, 1000, 1, '(swastika)' );
+insert into emoticonhotkey values( 1208, 1001, 1, '(swastika)' );
+
+insert into emoticon values( 1002, 31, 2, 'diwalim', 14, 14, '/usr/fusion/emoticons/diwali2009/DiwaliM_14.gif', '/usr/fusion/emoticons/diwali2009/DiwaliM_14.png' );
+insert into emoticonhotkey values( 1209, 1002, 1, '(diwalim)' );
+

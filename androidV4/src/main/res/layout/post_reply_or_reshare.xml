@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:migme="http://schemas.android.com/apk/res/com.projectgoth"
+    android:id="@+id/reply_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_gray_background"
+    android:paddingBottom="@dimen/small_padding"
+    android:paddingTop="@dimen/normal_padding">
+
+    <ImageView
+        android:id="@+id/reply_author_pic"
+        android:layout_width="@dimen/contact_pic_size_small"
+        android:layout_height="@dimen/contact_pic_size_small"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:contentDescription="@string/post_reply_or_reshare_cd_reply_author_pic" />
+
+    <com.projectgoth.ui.widget.UsernameWithLabelsView
+        android:id="@+id/reply_author_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/reply_author_pic"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:layout_toRightOf="@id/reply_author_pic"
+        migme:labelSize="@dimen/miglevel_size"
+        migme:textSize="@dimen/text_size_medium" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/reply_author_details"
+        android:layout_below="@id/reply_author_details"
+        android:layout_margin="@dimen/small_margin"
+        android:background="@drawable/rounded_corner_white"
+        android:padding="@dimen/small_padding">
+
+        <!-- Contains a list of mime content views -->
+
+        <LinearLayout
+            android:id="@+id/content_views_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/reply_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_views_container"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:textColor="@color/default_timestamp"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/reply_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/reply_separator_height"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

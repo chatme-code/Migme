@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/my_stickers_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:background="@drawable/rounded_corner_white"
+        android:padding="@dimen/normal_padding" >
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/light_gray_text"
+            android:textSize="@dimen/text_size_large" />
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            style="@style/ActionBarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/header_sticker_store_cd_arrow_right"
+            android:src="@drawable/ad_arrowright_grey" />
+    </RelativeLayout>
+
+    <!-- + TODO: Refactor; This part is also used by header_gift_store. -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <RelativeLayout
+            android:id="@+id/category_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/category_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner_white"
+                android:padding="@dimen/normal_padding"
+                android:textColor="@color/light_gray_text"
+                android:textSize="@dimen/text_size_large" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/dropdown_corner" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sortby_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginRight="@dimen/normal_margin"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/sortby_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner_white"
+                android:padding="@dimen/normal_padding"
+                android:textColor="@color/light_gray_text"
+                android:textSize="@dimen/text_size_large" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/dropdown_corner" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

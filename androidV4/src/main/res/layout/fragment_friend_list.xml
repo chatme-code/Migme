@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/friend_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:drawSelectorOnTop="false"
+        android:fadeScrollbars="true"
+        android:focusable="false"
+        android:contentDescription="@string/fragment_friend_list_cd_friend_list"
+        android:focusableInTouchMode="false" >
+    </ListView>
+
+    <com.projectgoth.ui.widget.PinnedHeaderExpandableListView
+        android:id="@+id/expandable_friend_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:childDivider="@null"
+        android:divider="@null"
+        android:drawSelectorOnTop="false"
+        android:fadeScrollbars="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:groupIndicator="@null" />
+
+</FrameLayout>

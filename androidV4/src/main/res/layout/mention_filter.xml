@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mentions_list_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/mentions_list_filter"
+        style="@style/Form.TextField.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_textbox"
+        android:contentDescription="@string/fragment_chat_cd_mentions_list_filter"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true" />
+
+    <ListView
+        android:id="@+id/mentions_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</merge>

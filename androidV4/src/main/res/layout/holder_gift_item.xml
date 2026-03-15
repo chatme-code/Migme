@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/normal_padding" >
+
+    <ImageView
+        android:id="@+id/gift_image"
+        android:layout_width="@dimen/emoticon_gridSize"
+        android:layout_height="@dimen/emoticon_gridSize"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:padding="@dimen/xsmall_padding"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/holder_gift_item_cd_gift_image"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/gift_class_label"
+        android:layout_width="@dimen/label_size"
+        android:layout_height="@dimen/label_size"
+        android:layout_alignTop="@id/gift_image"
+        android:layout_alignLeft="@id/gift_image"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/holder_gift_item_cd_gift_class_label"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/gift_ribbon"
+        android:layout_width="@dimen/icon_width_small"
+        android:layout_height="@dimen/icon_width_small"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/holder_gift_item_cd_gift_ribbon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/gift_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gift_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/dark_text_color"/>
+
+    <TextView
+        android:id="@+id/gift_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gift_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:minLines="2"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/light_text_color"/>
+
+</RelativeLayout>

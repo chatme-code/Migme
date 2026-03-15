@@ -1,0 +1,42 @@
+<resources>
+
+    <dimen name="text_size_xsmall">9sp</dimen>
+    <dimen name="text_size_small">11sp</dimen>
+    <dimen name="text_size_medium">12sp</dimen>
+    <dimen name="text_size_large">15sp</dimen>
+    <dimen name="text_size_xlarge">16sp</dimen>
+    <dimen name="text_size_xxlarge">18sp</dimen>
+    <dimen name="text_size_xxxlarge">20sp</dimen>
+
+    <dimen name="button_width_default">64dp</dimen>
+    <dimen name="button_left_right_padding">8dp</dimen>
+    <dimen name="post_padding_leftright">16dp</dimen>
+    <dimen name="medium_padding">6dp</dimen>
+    <dimen name="signup_suggested_item_padding">5dp</dimen>
+    <dimen name="signup_suggested_item_margin">5dp</dimen>
+
+    <dimen name="sel_usr_box_max_h">40dp</dimen>
+
+
+    <dimen name="signup_email_verify_login_height">120dp</dimen>
+    <dimen name="verify_button_width">150dp</dimen>
+    <dimen name="signup_email_verify_text_padding">10dp</dimen>
+    <dimen name="signup_suggested_margin">5dp</dimen>
+    <dimen name="signup_suggested_body_margin_bottom">25dp</dimen>
+    <dimen name="signup_suggested_body_margin_left_right">5dp</dimen>
+    <dimen name="signup_suggested_text_margin">5dp</dimen>
+
+    <dimen name="xlarge_margin_bot">0dp</dimen>
+    <dimen name="xlarge_margin_bot_text">1dp</dimen>
+    <dimen name="xlarge_margin_bot_text_right">5dp</dimen>
+
+    <dimen name="login_fields_text_size">14sp</dimen>
+    <dimen name="login_bot_layout_height">100dp</dimen>
+    <dimen name="login_header_height">40dp</dimen>
+    <dimen name="login_text_bot_size">14sp</dimen>
+    <dimen name="login_interval_padding">2dp</dimen>
+
+    <dimen name="signup_resend_button_padding">5dp</dimen>
+
+</resources>
+

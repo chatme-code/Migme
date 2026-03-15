@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    
+    <!-- We wrap the content in a LinearLayout because we need to hide the header -->
+    <!-- See http://pivotallabs.com/android-tidbits-6-22-2011-hiding-header-views for details -->
+    
+	<TextView
+	    android:id="@+id/chat_notification"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:layout_margin="@dimen/normal_margin"
+	    android:textColor="@color/default_text"
+	    android:textSize="@dimen/text_size_medium"
+	    android:paddingTop="@dimen/normal_padding"
+	    android:paddingBottom="@dimen/normal_padding"
+	    android:background="@color/white"/>
+	
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/up_shadow_height"
+        android:background="@color/gray_background" >
+    </View>
+
+</LinearLayout>
