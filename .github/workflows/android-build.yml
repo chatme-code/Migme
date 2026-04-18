@@ -1,0 +1,122 @@
+name: Android Build
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-debug:
+    name: Build Debug APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout kode
+        uses: actions/checkout@v4
+
+      - name: Setup JDK 17 (untuk sdkmanager)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Accept Android SDK licenses
+        run: yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses || true
+
+      - name: Install Android SDK components
+        run: |
+          $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager \
+            "platforms;android-21" \
+            "build-tools;28.0.3" \
+            "platform-tools"
+
+      - name: Setup JDK 8 (untuk Gradle build lama)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+
+      - name: Cache Gradle wrapper
+        uses: actions/cache@v4
+        with:
+          path: ~/.gradle/wrapper
+          key: gradle-wrapper-${{ hashFiles('androidV4/gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: gradle-wrapper-
+
+      - name: Berikan izin eksekusi gradlew
+        working-directory: androidV4
+        run: chmod +x gradlew
+
+      - name: Hapus cache Gradle lama
+        run: rm -rf ~/.gradle/caches
+
+      - name: Build Debug APK
+        working-directory: androidV4
+        run: ./gradlew assembleFullDebug --no-daemon --refresh-dependencies --stacktrace
+
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: migme-debug-${{ github.sha }}
+          path: androidV4/build/outputs/apk/**/*.apk
+          retention-days: 14
+
+  build-release:
+    name: Build Release APK
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+
+    steps:
+      - name: Checkout kode
+        uses: actions/checkout@v4
+
+      - name: Setup JDK 17 (untuk sdkmanager)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Accept Android SDK licenses
+        run: yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses || true
+
+      - name: Install Android SDK components
+        run: |
+          $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager \
+            "platforms;android-21" \
+            "build-tools;28.0.3" \
+            "platform-tools"
+
+      - name: Setup JDK 8 (untuk Gradle build lama)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+
+      - name: Cache Gradle wrapper
+        uses: actions/cache@v4
+        with:
+          path: ~/.gradle/wrapper
+          key: gradle-wrapper-${{ hashFiles('androidV4/gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: gradle-wrapper-
+
+      - name: Berikan izin eksekusi gradlew
+        working-directory: androidV4
+        run: chmod +x gradlew
+
+      - name: Hapus cache Gradle lama
+        run: rm -rf ~/.gradle/caches
+
+      - name: Build Release APK
+        working-directory: androidV4
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: ./gradlew assembleFullRelease --no-daemon --refresh-dependencies --stacktrace
+
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: migme-release-${{ github.sha }}
+          path: androidV4/build/outputs/apk/**/*.apk
+          retention-days: 30
